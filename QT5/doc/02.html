@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://blog.csdn.net/qq_38965737/article/details/102595908 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>.login-box{position: fixed;display: none;left: 50%;top: 50%;z-index: 10000;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);-o-transform: translate(-50%, -50%);-moz-transform: translate(-50%, -50%);transform: translate(-50%, -50%);background-color: #fff;}.login-mark{position: fixed;top: 0;left: 0;z-index: 9999;background-color: rgba(0, 0, 0, 0.5);width: 100%;height: 100%;display: none;}</style>
+    <link rel="canonical" href="https://blog.csdn.net/qq_38965737/article/details/102595908">
+    
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content="{&quot;pid&quot;: &quot;blog&quot;, &quot;spm&quot;:&quot;1001.2101&quot;}">
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" media="handheld" href="https://blog.csdn.net/qq_38965737/article/details/102595908#">
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="applicable-device" content="pc">
+    <link href="https://g.csdnimg.cn/static/logo/favicon32.ico" rel="shortcut icon" type="image/x-icon">
+    <title>执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……_葛同学的博客-CSDN博客</title>
+    <script src="./02_files/osd.js.下載"></script><script src="./02_files/f(2).txt"></script><script type="text/javascript" async="" src="./02_files/analytics.js.下載"></script><script src="./02_files/f(3).txt" id="google_shimpl"></script><script type="text/javascript" async="" src="./02_files/auto_dup"></script><script type="text/javascript" charset="utf-8" async="" src="./02_files/apiaccept"></script><script type="text/javascript" async="" src="./02_files/trackad.js.下載"></script><script src="./02_files/push.js.下載"></script><script type="text/javascript" async="" src="./02_files/saved_resource"></script><script src="./02_files/hm.js.下載"></script><script src="./02_files/js"></script><script src="./02_files/push.js(1).下載" id="ttzz"></script><script>
+      (function(){ 
+        var el = document.createElement("script"); 
+        el.src = "https://s3a.pstatp.com/toutiao/push.js?1abfa13dfe74d72d41d83c86d240de427e7cac50c51ead53b2e79d40c7952a23ed7716d05b4a0f683a653eab3e214672511de2457e74e99286eb2c33f4428830"; 
+        el.id = "ttzz"; 
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(el, s);
+      })(window)
+    </script>
+        <meta name="keywords" content="执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……">
+        <meta name="csdn-baidu-search" content="{&quot;autorun&quot;:true,&quot;install&quot;:true,&quot;keyword&quot;:&quot;执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……&quot;}">
+    <meta name="description" content="OpenCV 运行生成的解决方案文件提示如下错误：OpenCV(3.4.8) Error: Assertion failed (size.width&amp;gt;0 &amp;amp;&amp;amp;size.height&amp;gt;0) in cv::imshow, fileC:\build\3_4_winpack-build-win64-vc14\opencv\modules\highgui\src\windo...">
+    <script src="./02_files/blog.js.下載" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="./02_files/detail_enter-8530003d8b.min.css">
+    <style>
+        #content_views pre{user-select: none;}
+        #content_views pre code{user-select: none;}
+    </style>
+    <script type="application/ld+json">{"@context":"https://ziyuan.baidu.com/contexts/cambrian.jsonld","@id":"https://blog.csdn.net/qq_38965737/article/details/102595908","appid":"1638831770136827","pubDate":"2019-10-16T22:04:15","title":"执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:&hellip;&hellip;_葛同学的博客-CSDN博客","upDate":"2019-10-16T22:42:58"}</script>
+        <link rel="stylesheet" type="text/css" href="./02_files/skin3-template-45808e735f.min.css">
+    <script src="./02_files/jquery-1.9.1.min.js.下載" type="text/javascript"></script>
+    <script type="text/javascript">
+        var isCorporate = false;//注释删除enterprise
+        var username =  "qq_38965737";
+        var skinImg = "white";
+        var blog_address = "https://blog.csdn.net/qq_38965737";
+        var currentUserName = "";
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/qq_38965737/article/details/102595908";
+        var blogUrl = "https://blog.csdn.net/";
+        var avatar = "https://profile.csdnimg.cn/4/3/3/3_qq_38965737";
+        var articleTitle = "执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……";
+        var articleDesc = "OpenCV 运行生成的解决方案文件提示如下错误：OpenCV(3.4.8) Error: Assertion failed (size.width&amp;gt;0 &amp;amp;&amp;amp;size.height&amp;gt;0) in cv::imshow, fileC:\\build\\3_4_winpack-build-win64-vc14\\opencv\\modules\\highgui\\src\\windo...";
+        var articleTitles = "执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……_葛同学的博客-CSDN博客";
+        var nickName = "qq_码到成功";
+        var articleDetailUrl = "https://blog.csdn.net/qq_38965737/article/details/102595908";
+        if(window.location.host.split('.').length == 3) {
+            blog_address = blogUrl + username;
+        }
+        var skinStatus = "White";
+        var blogStaticHost = "https://csdnimg.cn/release/blogv2/"
+    </script>
+    <script src="./02_files/saved_resource(1)" type="text/javascript"></script>
+    <script src="./02_files/report.js.下載" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="./02_files/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+    <script src="./02_files/ds.js.下載"></script>
+<link rel="stylesheet" type="text/css" href="./02_files/csdn-toolbar-default.css"><script type="text/javascript" src="./02_files/csdn-notification.js.下載"></script><link rel="stylesheet" type="text/css" href="./02_files/user-login.css"><link rel="stylesheet" type="text/css" href="./02_files/collection-box.css"><link rel="stylesheet" type="text/css" href="./02_files/user-tooltip.css"><link rel="stylesheet" type="text/css" href="./02_files/user-medal.css"><style type="text/css">.hljs-ln{border-collapse:collapse}            .hljs-ln td{padding:0}            .hljs-ln-n{text-align: right;padding-right: 8px;}            .hljs-ln-n:before{content:attr(data-line-number)}</style><link rel="stylesheet" type="text/css" href="./02_files/user-ordertip.css"><link rel="stylesheet" type="text/css" href="./02_files/side-toolbar.css"><link rel="stylesheet" type="text/css" href="./02_files/csdn-footer.css"><style type="text/css">.leftPop{width:330px;position: fixed;font-size: 12px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10);padding:16px 40px 16px 16px;z-index: 100;}.leftPop .leftPop-close{position: absolute;right: 20px;fill:#70B8F0;cursor: pointer;}</style><meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="./02_files/f(4).txt" as="script"><script type="text/javascript" src="./02_files/f(4).txt"></script><link rel="preload" href="./02_files/f(5).txt" as="script"><script type="text/javascript" src="./02_files/f(5).txt"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class="nodata " style=""><div id="MathJax_Message" style="display: none;"></div><div id="csdn-toolbar" style="position: relative; top: 0px; left: 0px; width: 100%;">
+                    <div class="toolbar-inside">
+                      <div class="toolbar-container">
+                        <div class="toolbar-container-left">
+                          <div class="toolbar-logo toolbar-subMenu-box csdn-toolbar-fl"><a data-report-click="{&quot;spm&quot;:&quot;3001.4476&quot;}" data-report-query="spm=3001.4476" href="https://www.csdn.net/"><img title="CSDN首页" src="./02_files/20201124032511.png"></a>
+                    </div>
+                          <ul class="toolbar-menus csdn-toolbar-fl"><li class="active " title="阅读深度、前沿文章">
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/&quot;,&quot;spm&quot;:&quot;3001.4477&quot;}" data-report-query="spm=3001.4477" href="https://blog.csdn.net/">
+                                  博客
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li><li class="" title="马上开始系统学习">
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://edu.csdn.net/&quot;,&quot;spm&quot;:&quot;3001.4482&quot;}" data-report-query="spm=3001.4482" href="https://edu.csdn.net/">
+                                  专栏课程
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li><li class="" title="获取源码、文档、学习资源">
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://download.csdn.net/&quot;,&quot;spm&quot;:&quot;3001.4483&quot;}" data-report-query="spm=3001.4483" href="https://download.csdn.net/">
+                                  下载
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li><li class="" title="技术问题，有问必答">
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://ask.csdn.net/&quot;,&quot;spm&quot;:&quot;3001.4492&quot;}" data-report-query="spm=3001.4492" href="https://ask.csdn.net/">
+                                  问答
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li><li class="" title="找到志同道合的伙伴">
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://www.csdn.net/c/&quot;,&quot;spm&quot;:&quot;3001.6068&quot;}" data-report-query="spm=3001.6068" href="https://www.csdn.net/c/">
+                                  社区
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li><li class="" title="安装你的浏览器助手">
+                                <a data-report-click="{&quot;spm&quot;:&quot;3001.6135&quot;,&quot;dist&quot;:&quot;https://so.csdn.net/marketing/download.html?invitationCode=U23CJF4&amp;from=0802toobar&quot;}" data-report-query="spm=3001.6135" href="https://so.csdn.net/marketing/download.html?invitationCode=U23CJF4&amp;from=0802toobar">
+                                  插件
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li><li class="" title="认证你的技术能力">
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://ac.csdn.net/?short_code=13271b93&quot;,&quot;spm&quot;:&quot;3001.5716&quot;}" data-report-query="spm=3001.5716" href="https://ac.csdn.net/?short_code=13271b93">
+                                  认证
+                                  
+                                  
+                                </a>
+                                
+                                
+                              </li></ul>
+                        </div>
+                        <div class="toolbar-container-middle">
+                        <div class="toolbar-search onlySearch"><div class="toolbar-search-container">
+                    <input id="toolbar-search-input" autocomplete="off" type="text" value="" placeholder="OpenCv">
+                    <button id="toolbar-search-button"><i></i><span>搜索</span></button>
+                    <input type="password" autocomplete="new-password" readonly="" disabled="true" style="display: none; position:absolute;left:-9999999px;width:0;height:0;">
+                  </div></div></div>
+                        <div class="toolbar-container-right">
+                          <div class="toolbar-btns onlyUser"><div class="toolbar-btn toolbar-btn-login csdn-toolbar-fl ">
+                       <a data-report-click="{&quot;spm&quot;:&quot;3001.5105&quot;}" data-report-query="spm=3001.5105" href="https://passport.csdn.net/account/login">登录/注册</a>
+                      </div>
+                    <div class="toolbar-btn toolbar-btn-vip csdn-toolbar-fl">
+                      <a data-report-click="{&quot;mod&quot;:&quot;popu_336&quot;,&quot;dest&quot;:&quot;https://mall.csdn.net/vip&quot;,&quot;spm&quot;:&quot;3001.4496&quot;}" data-report-query="spm=3001.4496" href="https://mall.csdn.net/vip">会员中心 </a>
+                      </div>
+                    <div class="toolbar-btn toolbar-btn-collect csdn-toolbar-fl">
+                      <a data-report-click="{&quot;spm&quot;:&quot;3001.4506&quot;}" data-report-query="spm=3001.4506" href="https://i.csdn.net/#/user-center/collection-list?type=1">收藏</a>
+                      </div>
+                    <div class="toolbar-btn csdn-toolbar-fl"><a data-report-click="{&quot;spm&quot;:&quot;3001.4507&quot;}" data-report-query="spm=3001.4507" href="https://blink.csdn.net/">动态</a></div>
+                    
+                    <div class="toolbar-btn toolbar-btn-write csdn-toolbar-fl ">
+                      <a data-report-click="{&quot;spm&quot;:&quot;3001.4503&quot;}" data-report-query="spm=3001.4503" href="https://mp.csdn.net/"><i></i>创作<i></i></a>
+                    
+        <div id="csdn-toolbar-write" class="csdn-toolbar-plugin" style="display: none;">
+          <div class="csdn-toolbar-plugin-triangle"></div>
+          <ul class="csdn-toolbar-write-box">
+            <li class="csdn-toolbar-write-box-blog">
+              <a href="https://mp.csdn.net/edit" target="_blank" data-report-click="{&quot;spm&quot;:&quot;3001.5352&quot;}" data-report-query="spm=3001.5352">
+                <i class="csdn-toolbar-write-icon"></i>
+                <span>写文章</span>
+              </a>
+            </li>
+            <li class="csdn-toolbar-write-box-blink">
+              <a href="https://blink.csdn.net/" target="_blank" data-report-click="{&quot;spm&quot;:&quot;3001.5353&quot;}" data-report-query="spm=3001.5353">
+                <i class="csdn-toolbar-write-icon"></i>
+                <span>发Blink</span>
+              </a>
+            </li>
+            <li class="csdn-toolbar-write-box-ask">
+              <a href="https://ask.csdn.net/new?word=" target="_blank" data-report-click="{&quot;spm&quot;:&quot;3001.5354&quot;}" data-report-query="spm=3001.5354">
+                <i class="csdn-toolbar-write-icon"></i>
+                <span>提问题</span>
+              </a>
+            </li>
+            <li class="csdn-toolbar-write-box-upload">
+              <a href="https://mp.csdn.net/mp_download/creation/uploadResources" target="_blank" data-report-click="{&quot;spm&quot;:&quot;3001.5355&quot;}" data-report-query="spm=3001.5355">
+                <i class="csdn-toolbar-write-icon"></i>
+                <span>传资源</span>
+              </a>
+            </li>
+            <li class="csdn-toolbar-write-box-code">
+              <a href="https://codechina.csdn.net/explore" target="_blank" data-report-click="{&quot;spm&quot;:&quot;3001.5356&quot;}" data-report-query="spm=3001.5356">
+                <i class="csdn-toolbar-write-icon"></i>
+                <span>建项目</span>
+              </a>
+            </li>
+          </ul>
+        
+        <div class="csdn-toolbar-write-activity">
+          <div class="csdn-toolbar-write-activity-head"><span>创作活动</span><a href="https://mp.csdn.net/mp_blog/manage/creative?spm=1011.2124.3001.5311" target="_blank" data-report-click="{&quot;spm&quot;:&quot;3001.5358&quot;}" data-report-query="spm=3001.5358">更多<i></i></a></div>
+          <ul>
+          <li>
+            <a href="https://bbs.csdn.net/topics/600473319" target="_blank">#C站英豪榜之「Python」有奖征文 </a>
+          </li>
+        
+          <li>
+            <a href="https://marketing.csdn.net/p/f01c3166948be531544be635fecfe661/?utm_source=1762223883" target="_blank">#2021友盟+ 移动应用性能挑战赛-万元悬赏“移动开发性能优化大牛”</a>
+          </li>
+        </ul>
+          <div class="toolbar-write-activity-more">
+          </div>
+        </div>
+      </div>
+      </div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        <script>
+            var toolbarSearchExt = '{"landingWord":[],"queryWord":"","tag":["OpenCv","图像处理","解决方案错误"],"title":"执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:&hellip;&hellip;"}';
+        </script>
+    <script src="./02_files/csdn-toolbar.js.下載" type="text/javascript"></script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+<link rel="stylesheet" href="./02_files/blog_code-01256533b5.min.css">
+<link rel="stylesheet" href="./02_files/chart-3456820cac.css">
+<div class="main_father clearfix d-flex justify-content-center" style="height: auto !important;"> 
+    <div class="container clearfix" id="mainBox" style="height: auto !important;">
+        <main>
+<script type="text/javascript">
+    function getQueryString(name) {   
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
+      var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+      if( r != null ) return decodeURIComponent( r[2] ); return '';   
+    }
+    function stripscript(s){ 
+      var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？%]") 
+      var rs = ""; 
+      for (var i = 0; i < s.length; i++) { 
+        rs = rs+s.substr(i, 1).replace(pattern, ''); 
+      } 
+      return rs; 
+    }
+    var blogHotWords = stripscript(getQueryString('utm_term')).length > 1 ? stripscript(getQueryString('utm_term')) : ''
+</script>
+<div class="blog-content-box">
+        <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="./02_files/original.png" alt="">
+                    <div class="bar-content">
+                    <a class="follow-nickName " href="https://blog.csdn.net/qq_38965737" target="_blank" rel="noopener">qq_码到成功</a>
+                    <span class="time">2019-10-16 22:42:58</span>
+                    <img class="article-read-img article-heard-img" src="./02_files/articleReadEyes.png" alt="">
+                    <span class="read-count">5077</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click="{&quot;mod&quot;:&quot;popu_823&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="./02_files/tobarCollect.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="./02_files/tobarCollectionActive.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                            4
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                            <span class="label">文章标签：</span>
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;OpenCv&quot;,&quot;ab&quot;:&quot;new&quot;}" class="tag-link" href="https://www.csdn.net/tags/MtTaEg0sMTk0NDgtYmxvZwO0O0OO0O0O.html" target="_blank" rel="noopener">OpenCv</a>
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;图像处理&quot;,&quot;ab&quot;:&quot;new&quot;}" class="tag-link" href="https://www.csdn.net/tags/MtjaMg3sNzkyMy1ibG9n.html" target="_blank" rel="noopener">图像处理</a>
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;解决方案错误&quot;,&quot;ab&quot;:&quot;new&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E9%94%99%E8%AF%AF&amp;t=blog&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=" target="_blank" rel="noopener">解决方案错误</a>
+                    </div>
+                </div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/qq_38965737/article/details/102595908" target="_blank">https://blog.csdn.net/qq_38965737/article/details/102595908</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="./02_files/ck_htmledit_views-1a85854398.css">
+                <div id="content_views" class="markdown_views prism-atom-one-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <p>OpenCV 运行生成的解决方案文件提示如下错误：</p> 
+<p>OpenCV(3.4.8) Error: Assertion failed (size.width&gt;0 &amp;&amp;<br> size.height&gt;0) in cv::imshow, file<br> C:\build\3_4_winpack-build-win64-vc14\opencv\modules\highgui\src\window.cpp,<br> line 382</p> 
+<p>OpenCV: terminate handler is called! The last OpenCV error is:</p> 
+<p>OpenCV(3.4.8) Error: Assertion failed (size.width&gt;0 &amp;&amp;<br> size.height&gt;0) in cv::imshow, file<br> C:\build\3_4_winpack-build-win64-vc14\opencv\modules\highgui\src\window.cpp,<br> line 382</p> 
+<h1><a name="t0"></a><a id="1Windows10VS2015OpenCV348_19"></a>1、运行环境：Windows10+VS2015+OpenCV3.4.8</h1> 
+<p>你好！ 这是你第一次使用 <strong>Markdown编辑器</strong> 所展示的欢迎页。如果你想学习如何使用Markdown编辑器, 可以仔细阅读这篇文章，了解一下Markdown的基本语法知识。</p> 
+<h2><a name="t1"></a><a id="2OpenCVDebugx64__25"></a>2、OpenCV调试配置：Debug+x64 如下图所示：</h2> 
+<p><img alt="在这里插入图片描述" src="./02_files/20191016220854319.png"></p> 
+<h3><a name="t2"></a><a id="31__29"></a>3.1输入 代码，如下图所示：</h3> 
+<p><img alt="在这里插入图片描述" src="./02_files/20191016223141951.png"><br> 点击 调试—开始执行（不调试）H，结果正常。</p> 
+<h3><a name="t3"></a><a id="32__35"></a>3.2点击 生成—生成解决方案。</h3> 
+<p>在工程名&gt;x64&gt;Debug文件夹目录下，即为解决方案生成的目录，如下图所示：<br> <img alt="在这里插入图片描述" src="./02_files/20191016223250932.png"></p> 
+<p>双击运行test.exe文件，出现如下图错误提示：<br> <img alt="在这里插入图片描述" src="./02_files/20191016223822175.png"></p> 
+<h2><a name="t4"></a><a id="4_44"></a>4、错误原因：</h2> 
+<p>由于程序中读取图片的路径写的是相对路径，这个相对路径是相对于主程序.cpp文件位</p> 
+<p>置，即与主程序再同一级目录，但生成的解决方案文件在与图片不是同一级目录。故需要写出绝对目录，如下图所示；</p> 
+<p><img alt="在这里插入图片描述" src="./02_files/20191016223907356.png"></p> 
+<p>最后执行生成的解决方案文件test.exe，测试成功，如下图所示：</p> 
+<p><img alt="在这里插入图片描述" src="./02_files/2019101622413153.png"></p>
+                </div><div data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/102595908&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}"><div></div></div>
+                <link href="./02_files/markdown_views-d7a94ec6ab.css" rel="stylesheet">
+                <link href="./02_files/style-49037e4d27.css" rel="stylesheet">
+        </div>
+    </article>
+</div>
+<div class="more-toolbox-new more-toolbox-active" id="toolBarBox">
+    <div class="left-toolbox" style="position: fixed; z-index: 999; left: 414.2px; bottom: 0px; width: 1010px;">
+        <div class="toolbox-left">
+            <div class="profile-box"><a class="profile-href" target="_blank" href="https://blog.csdn.net/qq_38965737"><img class="profile-img" src="./02_files/3_qq_38965737"><span class="profile-name">qq_码到成功</span></a></div>
+            <div class="profile-attend">
+                    <a class="tool-attend tool-bt-button tool-bt-attend" href="javascript:;">关注</a>
+                <a class="tool-item-follow active-animation" style="display:none;">关注</a>
+            </div>
+        </div>
+        <div class="toolbox-middle">
+        <ul class="toolbox-list">
+            <li class="tool-item tool-item-size tool-active is-like" id="is-like">
+            <a class="tool-item-href">
+                <img style="display:none;" id="is-like-imgactive-animation-like" class="animation-dom active-animation" src="./02_files/tobarThumbUpactive.png" alt="">
+                <img class="isactive" style="display:none" id="is-like-imgactive" src="./02_files/newHeart1Active.png" alt="">
+                <img class="isdefault" style="display:block" id="is-like-img" src="./02_files/newHeart1White.png" alt="">  
+                <span id="spanCount" class="count ">
+                        1
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">点赞</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-item-comment">
+            <a class="tool-item-href" href="https://blog.csdn.net/qq_38965737/article/details/102595908#commentBox">
+                <img class="isdefault" src="./02_files/newCommentWhite.png" alt="">
+                <span class="count">
+                    0
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">评论</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-collection ">
+            <a class="tool-item-href" href="javascript:;" data-report-click="{&quot;mod&quot;:&quot;popu_824&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4130&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                <img style="display:none" id="is-collection-img-collection" class="animation-dom active-animation" src="./02_files/tobarCollectionActive.png" alt="">
+                <img class="isdefault" id="is-collection-img" style="display:block" src="./02_files/newCollectWhite.png" alt="">
+                <img class="isactive" id="is-collection-imgactive" style="display:none" src="./02_files/newCollectActive.png" alt="">
+                <span class="count get-collection " id="get-collection">
+                    4
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">收藏</span></div>
+            </li>
+            <li class="tool-item tool-active">
+                <a class="" href="javascript:;">
+                    <img class="company active" id="health-companies" src="./02_files/newHealthCompanies1Active.gif" alt="一键三连">
+                </a>
+                <div class="tool-hover-tip three-click"><span class="text">一键三连</span></div>
+            </li>
+            <li class="tool-item tool-item-bar">
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-QRcode" id="tool-share">
+                <a class="tool-item-href" href="javascript:;" data-report-click="{&quot;mod&quot;:&quot;1582594662_002&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4129&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                    <img class="isdefault" src="./02_files/newShareWhite.png" alt="">
+                </a>
+                <div class="QRcode" id="tool-QRcode">
+                    <p class="title">
+                    扫一扫，分享海报
+                    </p>
+                    <div id="shareCode" title="https://blog.csdn.net/qq_38965737/article/shareArticleCardPage?article_id=102595908&amp;utm_source=po_popup"><canvas width="144" height="144" style="display: none;"></canvas><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAAAXNSR0IArs4c6QAADh1JREFUeF7tnduW3DoIRDP//9E5q29zbAexN5Lmkgx5TMsygqIosLvn7devX79/Lf77/fvPLd7e3t53fX1+/L/oltE+r3XRfiOzX2uz/W7XRvZYW1/3prNn56QzZfYd7T/aQNdE/lwJ/y3KDaCDBxtANTi9A4iyNdo2ynSbARmz2Mwkmy3jzbDlDmYZMUcEYgvs7NqjzZals7jfWfDFQBSMBhBn5krwCMQNoIH/reNmsqcZ6OG1TKetEMeQgTLHR7RrjZgpTStUS6CzJXhFMGfXRvYdA05ygBLE2E0CPNrjeN+whDWAYrqc6bgaQBdfWgai7Mhqur0Hq5J8Bdlog39tCFbtz1jXlvwVts8ahHvZOoxoPoyBKDgNoDG4G0CDId3RZQ2gBtA7le3SBpmordzDrrWtMVH69fMV9qWyTGfbNUq42jES219WwjJ1bzXEKFDk5Ou9KeANoPMoADUQZYERjbSHbf2v94rK4FXY2b2pTa4yC7W8pq0enS/zZ/UcR39ZXx3v3wB6eqPqeMtUNFupMiQlY/UcDaCnR0eBsllVdXwD6OH4kIEI5dnnpFmsON6x7mZnJiRX5iifce2IHXb4hphxBgPbX+f4qINakDaAHu9hVfw1A5x3bfrb8r28iwVQtJ29tlp6RgLQtryRkLcjgF3uXTmzDN3UsrcG0LmmZwGnEhZFoAFUxKVlkWagmmP/egaqdiC03paALKsjRhiFheyphTMX6llyjDTa8Rrb5r+uIXFs96uy713w2xJmA2CBYdc1gP5sna8++VIAZa+0ztBmVsJII0TXRgLW7rMrq4lRDHtRkCNbyf9ZUtv7zXRrp2saQHH4SfxaRrZlpgH09EAzEAOSwJeV9xVmscxN9zh9/tJARJdZKaEbZhQ/k+l0zY4OzwpPWyZnSgUF3MbE+iPaj2Zl7yK6AXQWqw2ghz8+FEC2k8qMoOGcZRu7D7X+1RJsBPQxEPfW9/lO8Yi5V/y1wvb2LMd1SwzUAPIur5SwBtDFrysOaQbiUkKiPOoEPfTzlfppfFUTkLC2wMiE4uho1tZqt1Pdd1SubPBsuaX9Ml/TPTJhfT+f/XUO67wI7VagZ46wWXbVG6ZTIfuqA04qVxRwClo1qb4MQJZFKAAWGBakxF7WnhVg7A7y0UeWGa1fq8LashIyUAPo7HoCOH1umacBNPhFiMiBhHbLJqfW8vDV20xANgPlv9wxkgMnX2dP4yu6w9CkndUQGKqZPNqPSqG5D53JAPgaqKrf7TkoGbOEGvkifZ2jepDRTaptfAPo/9+XNCD+FgCyYJkxNgMQgWWHHriLvWT6S11T9dpIEO8q39E+M1rV6jVal06iyVjbBTSAYk/N6D+KSVamZu7XAHp6vMoiK6z04xkoKxtUk6tDq5XSWckoWwptBmdMYMWqBdqxBFv/W98Qw9DnYQlrAJ3DZP2xA6TDbicYTVgQZyAggNDn6aMMovHXAWYyzrT9JH5HGbzCIlnbTUI4ujYrnZZNVhkos4tYkFr7BtAgijPdZgPo4sxmIOKI/O9tVBh0pruyJezLGIjd91ixK1ttSZwpJdHeK5rFsk12JutfKjO7/DEDNP06h9Us2TrSSg0ghtRnJyvF7MM0ELnCdgYzgrg6uLRBmcl0O6Ygltkhxqm1ryb/vURnL5StaKAG0MMDDaAnEqqvPjSAfhiAZh7IRaJrh1il4RUN9rIShjU9Gdit2rXiL7p3tvdM6b1eM2JS/TvRtmNpAHHZIjBUNRzppwbQRUs0A43Lo20IiImXGMjOLmwnZdtz23FRhlb3Ib1m7bfsSwlgRyb2nPZ8xIxRmUz/5CV1EA0g/05x1EKTf6PAr2hVAtIUgKJ3oi29WQdYw2zmZZleaZ0t3VsGWmEEssW+z2T1TsgmwVub6OsGEOXl/59TYjWAnr4iR1mNZNtWE0JiMaJ2KgfGBvLLjwYQ1eiMYu21dpRuAzWyKSutBMSM2qldtgBasYGeDqyUOipXYXmMfqGMupysxbNDPAvIaq0mDbQSvAbQnxAqv9JKGZCVAstUxz3sIxSyayUz7bWZrXQmYt1MHJMArzKLbY7uyWoZaIYJZpmKnE0O+cyAE3Bt4BtAQoU2Az2clAGcyqRNrgy4t8+qEmIUXv1C2W5dFDGazdaIgSLH26y24p6CZ5nPMqgFEyVmlttWEzaAnh4gh1X1BJWwFQ331wNoZraSMcsuRrAij4JLTCaq8mmJfcZl2dwy4woDRWesxL38RqJ1KmW6BZrdxzpiZT86ewPo4qEKEq/OtYGidfS5re+2lBBIzP2IIf8pBsraeBKNVvTa+Ug1eJbib/uuTIlJ9GZ2r9yXzmcn7tb/1XV3vzaA1v7kJYG+AfT0kG1Rib53lrqIIW//tzLjqD6KsY1BxtbGJ1W2n9GEloFOfl9hIDsQM7phBIZMbDeAxn/iuwGUCHrK5magOGVprLGdgWbouSrsjkfNOi46PAn+FS2SiWhbsle6SdJZkQ9XYlfy9crDVGKCrLbbA1rt1QB6eCCbRdGUfcrX0d9MtVlltY2dwdABr/ebsXM3E5DNK2en89G9I+Y0bEbzv9PnDSD+IqBNFNspZSWRmgkq+dWqYMX26L76m6kGucObTLztb+5HGUrOmc3QShB/JANZx1YplMRZVReNQFbVAXRfqw0sWGaAbc/0maOV2zm2f7HQ0rg96Ixmsc7OEsWCndatJGP0KGMF7IbVj0LclNOlF8qqBpFDbOAt+Mi+6tNz2q/6+agEV/1AJbU6WrGV5cRAdHjr7IyeG0Bn7zSACHXPz3c/X2oGejiWypkpn7YEj0KtXyiLjJl5r+W1j2W0KviOjqV5hmXLq82kDUi30dltCZP5W36VxQITS9iMI+iaBlA+LT6K2EogMzBVH+NU7hv+wTm7Qda22iylWU4VkKP7ZsKQzks2GiaolIrqOMD6iMS2Ocd1TQNIaIkG0BhaDaAG0AzxvF+TPsqwtLsjQ4+135Y/WpeJ5IrYJtFrRLb15Ux3RSUs+5waDZoJNYAur8BawUngvHatPwpAltOqIpqcaJ85RfbNCGE7hohGGBHrVO2vDBJXWLAaTxLbR7vTZ2F04wbQ+QX+BhAh5vJ5A6gBtNSF2eGVnaxWxTgJvEhkUxmNylW11FGJpXJk/ZXZSg2GPRM9NmoADb5HZh/8WtKm/SLdQbruWwGIjM3YwbaRVYYZiTnax7atxBRZe26FdbZu9nxXu3f5307rTywefSsj6zCq7ettPVG2yWKaV9jOgcoeJdLVVru+Anpa2wAyiLmsaQCNnfalDJT9xUKKs2UWKwqrmTeyz9qVlShrywyjWb/SOltGdzycHdmiX2nNShc5uwFkofBYR6CsltEGUM3/Zc1FJSC7PQWbkstqyswG0mFfBqBdjrVOtKWnuo7wRwGIrq9eQ+ttm08xIUDbrtCW96VXWm1mNoD4/eW/HkCVLidDp0X4ii6iLLR67TNsqE58iS1pXGH9b2J4W4PMufLdeDt4sgGNDkUHsA7LAkn3oM9NNxQxzNEvlqUbQE8PfEb2R86eKRUNoDMFnKpVdQ4UlToqf7bkWAFoaZ6y3u5jOyCbFFaUUwJYxt7d6TWAdiDnuccMo/1TAFr5kU0bh2wOEekAy1hWD4zstHYZjXMUnMTSBKDs/DNsv2I/acztvxOdOYdKVHXg1QB6/Eqr9QNpuRn/N4AKjw5mAmBZjvRatA/ZcwUXrV8CULUcWdRXykfWylJZs2XDBmpFwFKZIV9XS5g9O923AXQRthXQGZ0wk8G75jsZA30LANnMtEGh/apayQbvtq/N4Ag0dji6e8JMfs3Yg7Rldk6KE5XgLRqIWtnqAa0zR6WiARTDbSZODaANZW1HBpP+sEkT7VNN0CNLLzNQ9ixs16GqOoBEaDbxHQXKlqbX9daG4/2sTiEwGT0W3ZeAQQwUnZ1s1d+Nzw5FWdEAqr9lePMp6b4qM34ogAhpGTpnaNC2jJY5ZtgyE8LkbFs2rF/tOgKVZcHqXGkU4/I70RQoK2AbQBYy53UNoA8WtSNtkJVZyzbEtHOQqF317QD0ephaO8ZjdXaYmYNmNlDwLAgqAMvsISa+XkvrbUkkv0Y2VzXocQ+ad4XfjbdgagBxeVnRjhYMBL5vC6CVA1bFXpQVBHTKVvr8uj+xoPUH2W2Zz+rIDMTEyB/KQNZhK8K6GmTrECrBdDbK+tf1K9mf6baj/VQeG0AXT64Eb2ZAGIFhxYZ/ioGq70TbrKB11aBQ+ah8bkoEiXKzx4glstIz2rc6t4mYOEoe+38jCVGeAxEwMsomqt01NKT7mOA3gB5eIgmx/Uc2bWdmdZGlezzohj+7aUFly9tIr5FwNfqKmCXTeGT/0Q8NoEuWVVmQgDuTAA2ggei1OoUygDqkqOuwLW8DiB/8IgNZHWNnOYZyb2t2aBeb8aP6Xrl+dm3EMCORevUdlaaPHBuEiVv9brw9wAwYZq6J2MYGdrez7X0bQE9P2XZ0RwtqM5SYjBIgY0tbWmeAuZI8kW+sXCDQE9jTF8psy06ObQBRmNbKdwPo6QGbhbTOjgissK6WyWag58xkFwNl+UfOJgolG3eI0KytplIx0zGuNB1VX0cl3fr03ojsFtFM1ucVDaCHP4hVK0EdxYBmVrb7Pu6/fZC4AqCMbWym0P0pUJZtbEApaLsZivTo9X5kHzVKDaDBJNo+tqh0h1ZLUVB3dIp2jwbQJeWagVhC2FHHSQMR9WefzwQlykbb7mfXHvWEZRGi/SojzPiDrqEzZ+y2Yj/FZPvrHBE1VrWN1TujdVUd0wB6RM0+mgqfhTUDjT2wksE2of5WBvoPX6QRfylGBA4AAAAASUVORK5CYII=" style="display: block;"></div>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div class="toolbox-right">
+        </div>
+    </div>  
+</div>
+<script type="text/javascript" crossorigin="" src="./02_files/qrcode-7c90a92189.min.js.下載"></script>
+<script src="./02_files/saved_resource(2)" type="text/javascript"></script>
+<script type="text/javascript" crossorigin="" src="./02_files/user-login.js.下載"></script>
+<script type="text/javascript" crossorigin="" src="./02_files/collection-box.js.下載"></script>
+                <div class="first-recommend-box recommend-box">
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/public669/article/details/98314627" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_871&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;1&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/public669/article/details/98314627&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/public669/article/details/98314627" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_871&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;1&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/public669/article/details/98314627&quot;}" data-report-query="utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant">
+					解决<em>OpenCV</em>3+VS2015（VS2017）运行<em>时</em>出现<em>debug</em> <em>error</em> abort（）has been <em>called</em>的问题
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/public669" target="_blank"><span class="blog-title">陶陶name</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">08-03</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					4162
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/public669/article/details/98314627" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_871&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;1&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/public669/article/details/98314627&quot;}" data-report-query="utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">问题描述：
+在windows平台上安装<em>opencv</em>后，测试一张图片<em>时</em>，出现了<em>debug</em> <em>error</em> abort（）has been <em>called</em>的问题
+环境：
+vs2015
+windows 10
+<em>opencv</em> 4.1.1
+<em>解决方案</em>：
+首先放一下测试代码：
+#include &lt;iostream&gt;  
+#include &lt;<em>opencv</em>2/core/core.hpp&gt;  
+#in...</div>
+			</a>
+		</div>
+	</div>
+</div>
+                </div>
+            <div class="second-recommend-box recommend-box">
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/qq_41651379/article/details/82958883" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;1&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_41651379/article/details/82958883&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/qq_41651379/article/details/82958883" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;1&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_41651379/article/details/82958883&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant">
+					<em>OpenCV</em>3+VS2015 经常出现<em>debug</em> <em>error</em> abort（）has been <em>called</em>问题，求解决
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_41651379" target="_blank"><span class="blog-title">qq_41651379的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-07</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					2890
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/qq_41651379/article/details/82958883" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;1&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_41651379/article/details/82958883&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1"><em>OpenCV</em>3+VS2015 经常出现<em>debug</em> <em>error</em> abort（）has been <em>called</em>问题，求解决
+各位大神编译的<em>时</em>候遇到这样的问题该怎么解决？
+我用的是VS2015+<em>OpenCV</em>3，单个窗口的程序都能运行得好好的，但是一旦建立了多个窗口的操作就报错。
+这是我运行的程序：
+// Example 2-7. The Canny edge detector writes its ou...</div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+<a id="commentBox" name="commentBox"></a>
+<div class="comment-box">
+	<div class="comment-edit-box d-flex">
+		<a id="commentsedit"></a>
+		<div class="user-img">
+			<a href="javascript:void(0);">
+				<img class="show_loginbox" src="./02_files/anonymous-User-img.png">
+			</a>
+		</div>
+		<form id="commentform">
+			<img class="comment-sofa-flag" src="./02_files/commentFlag@2x.png" style="display: inline;">
+      <textarea class="comment-content" name="comment_content" id="comment_content" placeholder="优质评论可以帮助作者获得更高权重" maxlength="1000"></textarea>
+			<div class="comment-emoticon"><img class="comment-emoticon-img" data-url="https://csdnimg.cn/release/blogv2/dist/pc/img/" src="./02_files/emoticon.png" alt="表情包"></div> 
+      <span class="comment-emoticon-tip">插入表情</span>
+      <div class="comment-emoticon-box">
+        <div class="comment-emoticon-img-box"></div>
+			</div>
+      <div class="opt-box">
+				<div id="ubbtools" class="add_code">
+					<a href="https://blog.csdn.net/qq_38965737/article/details/102595908#insertcode" code="code" target="_self"><i class="icon iconfont icon-daima"></i></a>
+				</div>
+				<input type="hidden" id="comment_replyId" name="comment_replyId">
+				<input type="hidden" id="article_id" name="article_id" value="102595908">
+				<input type="hidden" id="comment_userId" name="comment_userId" value="">
+				<input type="hidden" id="commentId" name="commentId" value="">
+				<div class="dropdown" id="myDrap">
+					<a class="dropdown-face d-flex align-items-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<div class="txt-selected text-truncate">添加代码片</div>
+						<svg class="icon d-block" width="200px" height="100.00px" viewBox="0 0 2048 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M597.33333292 298.666667h853.333334L1023.99999992 725.333333 597.33333292 298.666667z"></path></svg>
+					</a>
+					<ul class="dropdown-menu" id="commentCode" aria-labelledby="drop4">
+						<li><a data-code="html">HTML/XML</a></li>
+						<li><a data-code="objc">objective-c</a></li>
+						<li><a data-code="ruby">Ruby</a></li>
+						<li><a data-code="php">PHP</a></li>
+						<li><a data-code="csharp">C</a></li>
+						<li><a data-code="cpp">C++</a></li>
+						<li><a data-code="javascript">JavaScript</a></li>
+						<li><a data-code="python">Python</a></li>
+						<li><a data-code="java">Java</a></li>
+						<li><a data-code="css">CSS</a></li>
+						<li><a data-code="sql">SQL</a></li>
+						<li><a data-code="plain">其它</a></li>
+					</ul>
+				</div>
+				<div class="right-box" id="rightBox" data-type="2">
+							<span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>
+							<a data-report-click="{&quot;mod&quot;:&quot;1582594662_003&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4227&quot;,&quot;ab&quot;:&quot;new&quot;}"><input type="submit" class="btn btn-sm btn-comment" value="发表评论"></a>
+				</div>
+			</div>
+		</form>
+		<input type="button" class="bt-comment-show" value="评论">
+	</div>
+	<div class="comment-list-container">
+		<a id="comments"></a>
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<div class="btn btn-sm btn-link-blue" id="btnMoreComment"></div>
+		</div>
+	</div>
+</div>            <div class="recommend-tit-mod">相关推荐
+                <a class="look-more" href="https://so.csdn.net/so/search?from=pc_relevant_blog&amp;q=%E6%89%A7%E8%A1%8COpenCV%E7%94%9F%E6%88%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E6%96%87%E4%BB%B6%E6%97%B6%EF%BC%8C%E6%8F%90%E7%A4%BADebug+Error%E5%92%8COpenCV%3A+terminate+handler+is+called%21+The+last+OpenCV+error+is%3A%E2%80%A6%E2%80%A6" target="_blank" data-report-view="{&quot;spm&quot;:&quot;1001.2101.3001.6420&quot;,&quot;extend1&quot;:&quot;pc&quot;}" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.6420&quot;,&quot;extend1&quot;:&quot;pc&quot;}"><img class="search-icon" src="./02_files/searchIcon.png" alt="">更多相似内容</a>
+            </div>
+            <div class="recommend-box insert-baidu-box">
+                <div class="recommend-item-box clearfix" style="display:none"></div><div class="recommend-item-box baiduSearch clearfix" data-type="blog" data-report-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/sixiangjun/article/details/48341275&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;0&quot;}">	                <div class="content-box">		                <div class="content-blog display-flex">			                  <div class="title-box">				                  <a href="https://blog.csdn.net/sixiangjun/article/details/48341275" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/sixiangjun/article/details/48341275&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;0&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">					                <div class="tit ellipsis-online ellipsis-online-1"><em>opencv</em>常见<em>错误</em>_夕阳的博客</div>				                  </a>			                  </div>                    <div class="info-box display-flex">                      <div class="info display-flex">                        <span class="info-block">7-19</span>                      </div>                    </div>                  </div>                  <div class="desc-box">                    <a href="https://blog.csdn.net/sixiangjun/article/details/48341275" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/sixiangjun/article/details/48341275&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;0&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">                      <div class="desc ellipsis-online ellipsis-online-1"><em>OpenCV</em> 3.0配置更是被简化了。和2.4.8、2.4.9的区别就是下文第五步,链接库的配置,只用添加 <em>opencv</em>_ts300d.lib、<em>opencv</em>_world300d.lib(<em>debug</em>版本的库) 或<em>opencv</em>_ts300.lib、<em>opencv</em>_world300.lib(release版本的库)即可。 </div>                    </a>                  </div>                </div>              </div><div class="recommend-item-box baiduSearch clearfix" data-type="blog" data-report-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_43668062/article/details/108993458&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;1&quot;}">	                <div class="content-box">		                <div class="content-blog display-flex">			                  <div class="title-box">				                  <a href="https://blog.csdn.net/weixin_43668062/article/details/108993458" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_43668062/article/details/108993458&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;1&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">					                <div class="tit ellipsis-online ellipsis-online-1"><em>OpenCV</em> 常见问题<em>解决方案</em>_这是听风者的博客</div>				                  </a>			                  </div>                    <div class="info-box display-flex">                      <div class="info display-flex">                        <span class="info-block">7-14</span>                      </div>                    </div>                  </div>                  <div class="desc-box">                    <a href="https://blog.csdn.net/weixin_43668062/article/details/108993458" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_43668062/article/details/108993458&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;1&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-1.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">                      <div class="desc ellipsis-online ellipsis-online-1">使用<em>OpenCV</em>过程中会遇到很多常见的问题,故作此总结. 一.<em>文件</em>路径(最重要的) 报错形式<em>:</em> <em>error</em><em>:</em>(-215<em>:</em>Assertion failed)<em>!</em>ssize.empty()in function ‘cv<em>:</em><em>:</em>resize‘ 1 <em>解决方案</em><em>:</em> (首先说明一下," / “是斜线,想象一下word里斜体的...</div>                    </a>                  </div>                </div>              </div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/sinat_34707539/article/details/51983234" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;2&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/sinat_34707539/article/details/51983234&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/sinat_34707539/article/details/51983234" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;2&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/sinat_34707539/article/details/51983234&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.essearch_pc_relevant">
+					【<em>OpenCV</em>笔记 11】VS2013中运行<em>OpenCV</em> 3.0<em>时</em>常见<em>错误</em>及解决方法
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/sinat_34707539" target="_blank"><span class="blog-title">西红是番茄</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">07-21</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					3879
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/sinat_34707539/article/details/51983234" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-2.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;2&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/sinat_34707539/article/details/51983234&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-2.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">常见案例、<em>错误</em>及解决方法：
+案例一：IplImage格式转换成Mat格式 &nbsp;
+
+//使用Mat的构造函数：
+Mat<em>:</em><em>:</em>Mat(const IplImage* img, bool copyData=false);
+默认情况下copyData为false
+IplImage* srcImg = cvLoadImage("Lena.jpg");
+//注意：以下三种效果一致，均为浅拷贝
+Ma</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/LOVELESSYI/article/details/79946859" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-3.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;3&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/LOVELESSYI/article/details/79946859&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/LOVELESSYI/article/details/79946859" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-3.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;3&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/LOVELESSYI/article/details/79946859&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.essearch_pc_relevant">
+					VS2017+CMAKE编译<em>opencv</em>_contrib在重新<em>生成</em><em>解决方案</em><em>时</em>出现大量<em>错误</em>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/LOVELESSYI" target="_blank"><span class="blog-title">LOVELESSYI的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">04-15</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					7283
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/LOVELESSYI/article/details/79946859" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-3.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;3&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/LOVELESSYI/article/details/79946859&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-3.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">首先基础教程如下教程然后一顿操作完了之后用VS2017重新<em>生成</em><em>解决方案</em><em>时</em>一百多个失败。看网上解决方法然后各种重新下载，重新编译，解决了好几天无果。突然看到网上有人说去掉WITH_CUDA试试。然后想起之前我的那篇博客里VS2017最新版和CUDA坑爹的兼容性。于是在CMAKE<em>时</em>将WITH_CUDA去掉。然后再次configure-&amp;gt;选择<em>opencv</em>_contrib位置-&amp;gt;configu...</div>
+			</a>
+		</div>
+	</div>
+</div><div class="recommend-item-box baiduSearch clearfix" data-type="blog" data-report-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/iteye_4392/article/details/81308489&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;4&quot;}">	                <div class="content-box">		                <div class="content-blog display-flex">			                  <div class="title-box">				                  <a href="https://blog.csdn.net/iteye_4392/article/details/81308489" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/iteye_4392/article/details/81308489&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;4&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">					                <div class="tit ellipsis-online ellipsis-online-1"><em>OpenCV</em> 常见问题及解决方法(中文翻译)_saybody</div>				                  </a>			                  </div>                    <div class="info-box display-flex">                      <div class="info display-flex">                        <span class="info-block">7-17</span>                      </div>                    </div>                  </div>                  <div class="desc-box">                    <a href="https://blog.csdn.net/iteye_4392/article/details/81308489" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/iteye_4392/article/details/81308489&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;4&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-4.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">                      <div class="desc ellipsis-online ellipsis-online-1">绝对路径 <em>opencv</em>\cxcore\include, <em>opencv</em>\cv\include, <em>opencv</em>\otherlibs\highgui 以及可选的 optionally, <em>opencv</em>\cvaux\include.  选择 "Link" tab -&gt; "Input" category -&gt; "Additional library path<em>:</em>". 加入输入库所在的路径...</div>                    </a>                  </div>                </div>              </div><div class="recommend-item-box baiduSearch clearfix" data-type="blog" data-report-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-5.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_30765505/article/details/96342168&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;5&quot;}">	                <div class="content-box">		                <div class="content-blog display-flex">			                  <div class="title-box">				                  <a href="https://blog.csdn.net/weixin_30765505/article/details/96342168" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-5.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_30765505/article/details/96342168&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;5&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-5.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">					                <div class="tit ellipsis-online ellipsis-online-1">【VS开发】【计算机视觉】使用<em>opencv</em>静态库编译程序<em>时</em>...</div>				                  </a>			                  </div>                    <div class="info-box display-flex">                      <div class="info display-flex">                        <span class="info-block">2-5</span>                      </div>                    </div>                  </div>                  <div class="desc-box">                    <a href="https://blog.csdn.net/weixin_30765505/article/details/96342168" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-5.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_30765505/article/details/96342168&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;5&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-5.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">                      <div class="desc ellipsis-online ellipsis-online-1">#include "<em>opencv</em>2/<em>opencv</em>.hpp" #pragma comment(lib, "vfw32.lib") #pragma comment( lib, "comctl32.lib" ) 另外一个比较重要的说明是,设置C/C++--&gt;代码<em>生成</em>中的选项运行库为多线程(/MT(d--<em>debug</em>))。可能是因为这些库编...</div>                    </a>                  </div>                </div>              </div>
+		
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/u011576009/article/details/72237000" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-4.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;4&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/u011576009/article/details/72237000&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/u011576009/article/details/72237000" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-4.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;4&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/u011576009/article/details/72237000&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-4.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-4.essearch_pc_relevant">
+					关于调试<em>opencv</em>的那些坑
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/u011576009" target="_blank"><span class="blog-title">u011576009的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">05-16</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					1279
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/u011576009/article/details/72237000" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-4.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;4&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/u011576009/article/details/72237000&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-4.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-4.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">调试<em>opencv</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/u013925378/article/details/87920635" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;5&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/u013925378/article/details/87920635&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/u013925378/article/details/87920635" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;5&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/u013925378/article/details/87920635&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5.essearch_pc_relevant">
+					调用<em>opencv</em><em>时</em>发生的一点问题
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/u013925378" target="_blank"><span class="blog-title">u013925378的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">02-25</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					4360
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/u013925378/article/details/87920635" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-5.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;5&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/u013925378/article/details/87920635&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">一直使用<em>opencv</em>3.4.0，最近新出了<em>opencv</em>4.0.1，引发了一些问题。【有些问题不是版本所致，顺带发现的，总结一下】
+
+1.和版本相关
+
+问题：使用一样的代码，将<em>opencv</em>从3.4.0更改为4.0.1<em>时</em>，有些<em>opencv</em>中的宏定义无法识别；
+
+解决方法：在<em>opencv</em>4.0.1的头<em>文件</em>中找相应变量所在的头<em>文件</em>，添加进代码即可。
+
+&nbsp;
+
+2.与版本无关
+
+问题：同样的代码，可以在VS工...</div>
+			</a>
+		</div>
+	</div>
+</div><div class="recommend-item-box baiduSearch clearfix" data-type="blog" data-report-view="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-8.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_30888413/article/details/97870261&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;8&quot;}">	                <div class="content-box">		                <div class="content-blog display-flex">			                  <div class="title-box">				                  <a href="https://blog.csdn.net/weixin_30888413/article/details/97870261" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-8.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_30888413/article/details/97870261&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;8&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-8.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">					                <div class="tit ellipsis-online ellipsis-online-1"><em>opencv</em>检错<em>:</em>程序运行过程正常,当跳出函数<em>时</em>出现断言错...</div>				                  </a>			                  </div>                    <div class="info-box display-flex">                      <div class="info display-flex">                        <span class="info-block">7-30</span>                      </div>                    </div>                  </div>                  <div class="desc-box">                    <a href="https://blog.csdn.net/weixin_30888413/article/details/97870261" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-8.essearch_pc_relevant\&quot;}&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4242&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_30888413/article/details/97870261&quot;,&quot;strategy&quot;:&quot;2~default~baidujs_title~default&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;index&quot;:&quot;8&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-8.essearch_pc_relevant&amp;spm=1001.2101.3001.4242">                      <div class="desc ellipsis-online ellipsis-online-1">在VS2015下配置好<em>Opencv</em>后,程序在函数运行过程中正常,调试<em>时</em>发现,当运行至跳出函数<em>时</em>,出现断言<em>错误</em>。 2.原因分析 单步跟踪调试发现,在函数结束<em>时</em>会进行vector的析构,出现了析构<em>错误</em>。并且,如果vector在定义完成之后,进行resize或reserve操...</div>                    </a>                  </div>                </div>              </div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/yl_best/article/details/90172751" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;6&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/yl_best/article/details/90172751&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/yl_best/article/details/90172751" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;6&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/yl_best/article/details/90172751&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6.essearch_pc_relevant">
+					<em>OpenCV</em>常见<em>错误</em>及解决办法 C++与Python
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/yl_best" target="_blank"><span class="blog-title">独步天秤的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">05-13</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					3905
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/yl_best/article/details/90172751" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;6&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/yl_best/article/details/90172751&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">Table of Contents
+
+说明
+
+常见<em>错误</em>1： Sizes of input arguments do not match
+
+常见<em>错误</em>2：Assertion failed (size.width&gt;0 &amp;&amp; size.height&gt;0) in cv<em>:</em><em>:</em>imshow
+
+常见<em>错误</em>3：<em>error</em> C3872<em>:</em> '0xa0'<em>:</em> this character is no...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/BigDream123/article/details/89477248" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;7&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/BigDream123/article/details/89477248&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/BigDream123/article/details/89477248" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;7&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/BigDream123/article/details/89477248&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.essearch_pc_relevant">
+					安装<em>opencv</em><em>时</em>候遇到<em>terminate</em> <em>called</em> after throwing an instance of 'cv<em>:</em><em>:</em>Exception'解决方法
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/BigDream123" target="_blank"><span class="blog-title">BigDream123的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">04-23</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					1万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/BigDream123/article/details/89477248" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;7&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/BigDream123/article/details/89477248&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">安装<em>opencv</em>的<em>时</em>候遇到如下问题
+
+
+<em>OpenCV</em> <em>Error</em><em>:</em> Unspecified <em>error</em> (The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Carbon support. If you are on Ubuntu or Debian, install libgtk2.0-de...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/hyxinyu/article/details/39160445" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-8.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;8&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/hyxinyu/article/details/39160445&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/hyxinyu/article/details/39160445" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-8.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;8&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/hyxinyu/article/details/39160445&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-8.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-8.essearch_pc_relevant">
+					<em>OPENCV</em>+vs2013中运行成功但是，<em>生成</em>的<em>DEBUG</em>中的可<em>执行</em><em>文件</em>不能运行，丢失<em>opencv</em>_core248d.dll
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/hyxinyu" target="_blank"><span class="blog-title">hyxinyu的专栏</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-09</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					2219
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/hyxinyu/article/details/39160445" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-8.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;8&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/hyxinyu/article/details/39160445&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-8.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-8.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">将相应的dll<em>文件</em>拷入<em>DEBUG</em><em>文件</em>夹，就可以</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/warningm_dm/article/details/105313196" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-9.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;9&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/warningm_dm/article/details/105313196&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/warningm_dm/article/details/105313196" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-9.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;9&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/warningm_dm/article/details/105313196&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-9.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-9.essearch_pc_relevant">
+					[学习笔记-<em>opencv</em>篇]编译<em>opencv</em>_contrib<em>时</em>可能出现的<em>错误</em>及解决方法
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/warningm_dm" target="_blank"><span class="blog-title">warningm_dm的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">04-04</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					1115
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/warningm_dm/article/details/105313196" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-9.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;9&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/warningm_dm/article/details/105313196&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-9.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-9.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">这里讲的是安装编译好<em>opencv</em>后添加<em>opencv</em>_contrib库并编译的情况。参考了https<em>:</em>//blog.csdn.net/Wenyue_Wang/article/details/82318484?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&amp;utm_source=di...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/windforever2014/article/details/53220524" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-10.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;10&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/windforever2014/article/details/53220524&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/windforever2014/article/details/53220524" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-10.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;10&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/windforever2014/article/details/53220524&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-10.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-10.essearch_pc_relevant">
+					调用了<em>opencv</em>的C++程序调试运行没有问题，但一运行exe就报错<em>debug</em> <em>error</em> R6010
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/windforever2014" target="_blank"><span class="blog-title">windforever2014的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">11-18</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					1万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/windforever2014/article/details/53220524" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-10.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;10&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/windforever2014/article/details/53220524&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-10.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-10.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">问题描述：最近做项目的<em>时</em>候，发现调用了<em>opencv</em>库的C++程序在VS2010上调试运行完全没有问题，但是一旦运行<em>debug</em><em>文件</em>下的exe<em>文件</em>就显示<em>debug</em> <em>error</em>，具体报错如图：
+
+
+虽然在调用<em>opencv</em>库的<em>时</em>候也遇到过这种问题，但是基本都是参数<em>错误</em>，指针问题，但是这次明明<em>debug</em>调试的<em>时</em>候完全没有问题，但是运行exe就出错了，
+一直百思不得其解，后面在运行另外一个小程序的<em>时</em>候</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/ASDF1712/article/details/79813241" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-11.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;11&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/ASDF1712/article/details/79813241&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/ASDF1712/article/details/79813241" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-11.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;11&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/ASDF1712/article/details/79813241&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-11.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-11.essearch_pc_relevant">
+					使用<em>OpenCV</em>+VS打开图片<em>时</em>显示<em>Debug</em> <em>Error</em><em>!</em> abort() has been <em>called</em>的报错问题解决
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/ASDF1712" target="_blank"><span class="blog-title">ASDF1712的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">04-04</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					1万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/ASDF1712/article/details/79813241" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-11.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;11&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/ASDF1712/article/details/79813241&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-11.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-11.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">问题描述：如上图所示，已将源<em>文件</em>和资源<em>文件</em>引入工程内，但运行后报错，报错界面如下：命令<em>提示</em>框内信息为：<em>OpenCV</em> <em>Error</em><em>:</em> Assertion failed (size.width&amp;gt;0 &amp;amp;&amp;amp; size.height&amp;gt;0) in cv<em>:</em><em>:</em>imshow, file C<em>:</em>\build\master_winpack-build-win64-vc14\<em>opencv</em>\modu...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/iteye_19871/article/details/81308487" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-12.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;12&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/iteye_19871/article/details/81308487&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/iteye_19871/article/details/81308487" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-12.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;12&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/iteye_19871/article/details/81308487&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-12.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-12.essearch_pc_relevant">
+					<em>OpenCV</em> 常见问题及解决方法（中文翻译）
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/iteye_19871" target="_blank"><span class="blog-title">技术代码资料库</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">08-31</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					165
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/iteye_19871/article/details/81308487" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-12.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;12&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromMachineLearnPai2~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/iteye_19871/article/details/81308487&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-12.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-12.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">
+常见问题及解决方法 
+一般性问题
+翻译：HUNNISH, 阿须数码
+
+如何正确安装 <em>OpenCV</em> ?
+阅读 安装指南 
+
+
+如何快速认识 <em>OpenCV</em> ?
+
+
+
+参考 样例。 
+
+在 Visual Studio 中加载 <em>OpenCV</em> workspace<em>:</em> 
+
+<em>opencv</em>.dsw for Microsoft Visual Studio 6.0 
+
+<em>opencv</em>.sln for ...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_41597774/article/details/104117000" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-13.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;13&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_41597774/article/details/104117000&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_41597774/article/details/104117000" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-13.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;13&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_41597774/article/details/104117000&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13.essearch_pc_relevant">
+					有效的数独
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_41597774" target="_blank"><span class="blog-title">HelloWorld</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">01-30</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					98
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_41597774/article/details/104117000" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-13.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;13&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/weixin_41597774/article/details/104117000&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-13.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">有效的数独
+判断一个 9x9 的数独是否有效。只需要根据以下规则，验证已经填入的数字是否有效即可。
+数字 1-9 在每一行只能出现一次。
+数字 1-9 在每一列只能出现一次。
+数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。
+上图是一个部分填充的有效的数独。
+数独部分空格内已填入了数字，空白格用 ‘.’ 表示。
+示例 1<em>:</em>
+输入<em>:</em>
+[
+[“5”,“3”,".",".",“7”,"....</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/qq_30534935/article/details/87449176" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-14.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;14&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_30534935/article/details/87449176&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/qq_30534935/article/details/87449176" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-14.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;14&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_30534935/article/details/87449176&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-14.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-14.essearch_pc_relevant">
+					12、数值的整数次方
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_30534935" target="_blank"><span class="blog-title">qq_30534935的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">02-16</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					40
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/qq_30534935/article/details/87449176" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-14.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;14&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_30534935/article/details/87449176&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-14.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-14.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">（个人水平有限，请见谅！）
+题目描述：
+给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
+代码示例：
+class Solution {
+public<em>:</em>
+    double Power(double base, int exponent) {
+        if (base == 0)
+            return 0;
+  ...</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/cai1493105270/article/details/111407791" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;15&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/cai1493105270/article/details/111407791&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/cai1493105270/article/details/111407791" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;15&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/cai1493105270/article/details/111407791&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15.essearch_pc_relevant">
+					pytorch跑网络坑总结
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/cai1493105270" target="_blank"><span class="blog-title">cai1493105270的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-19</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					169
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/cai1493105270/article/details/111407791" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;15&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/cai1493105270/article/details/111407791&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">学习神经网络有一年多了，终于终于开始跑网络了。此处记录自己因为不细心和对pytorch理解不够导致的一些<em>错误</em>，防止后面再犯类似<em>错误</em>。
+
+关于pytorch的transforms.RandomCrop和transforms.RandomHorizontalFlip
+
+
+由于做的课题是图像增强一类，因而数据和对应的l标签都是图像，在使用上述两个函数进行图像增强的过程中，发现经过transform处理后的图像和标签并不匹配，原因是因为上述函数有个随机因子。
+解决方法：
+
+直接取消图像增强
+自己写图像增强函数，然后</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://yunyaniu.blog.csdn.net/article/details/79676551" data-report-view="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;16&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://yunyaniu.blog.csdn.net/article/details/79676551&quot;}">
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://yunyaniu.blog.csdn.net/article/details/79676551" class="tit ellipsis-online ellipsis-online-1" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;16&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://yunyaniu.blog.csdn.net/article/details/79676551&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.essearch_pc_relevant">
+					解决<em>OpenCV</em>问题：<em>OpenCV</em> <em>Error</em><em>:</em> Assertion failed (<em>!</em>empty()) in cv<em>:</em><em>:</em>CascadeClassifier<em>:</em><em>:</em>detectMultiScale,
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_41185868" target="_blank"><span class="blog-title">一个处女座的程序猿</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">03-24</span>
+					<span class="info-block read"><img class="read-img" src="./02_files/readCountWhite.png" alt="">
+					5万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://yunyaniu.blog.csdn.net/article/details/79676551" target="_blank" data-report-click="{&quot;ab&quot;:&quot;new&quot;,&quot;mod&quot;:&quot;popu_387&quot;,&quot;extra&quot;:&quot;{\&quot;utm_medium\&quot;:\&quot;distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16.essearch_pc_relevant\&quot;}&quot;,&quot;dist_request_id&quot;:&quot;1630074479907_86530&quot;,&quot;ab_strategy&quot;:&quot;default&quot;,&quot;index&quot;:&quot;16&quot;,&quot;strategy&quot;:&quot;2~default~BlogCommendFromBaidu~default&quot;,&quot;dest&quot;:&quot;https://yunyaniu.blog.csdn.net/article/details/79676551&quot;}" data-report-query="utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.essearch_pc_relevant&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16.essearch_pc_relevant">
+				<div class="desc ellipsis-online ellipsis-online-1">解决<em>OpenCV</em>问题：<em>OpenCV</em> <em>Error</em><em>:</em> Assertion failed (<em>!</em>empty()) in cv<em>:</em><em>:</em>CascadeClassifier<em>:</em><em>:</em>detectMultiScale,
+
+
+
+目录
+
+解决问题
+
+解决思路
+
+解决方法
+
+
+
+解决问题
+
+<em>OpenCV</em> <em>Error</em><em>:</em> Assertion failed (<em>!</em>empty()) in cv<em>:</em><em>:</em>CascadeClassifier<em>:</em><em>:</em>...</div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+            <div class="template-box">
+                <span>©️2020 CSDN</span>
+                <span>皮肤主题: 大白</span>
+                <span> 设计师:CSDN官方博客</span>
+                <span>
+                    <a href="https://blog.csdn.net/" class="back-home c-blue c-blue-hover c-blue-focus">返回首页</a>
+                </span>
+            </div>
+<div class="blog-footer-bottom" style="margin-top:10px;">
+        <div id="copyright-box" class="">
+          <div id="csdn-copyright-footer" class="column small">
+            <ul class="footer-column-t">
+            <li>
+              <a href="https://www.csdn.net/company/index.html#about" target="_blank">关于我们</a>
+            </li>
+            <li>
+              <a href="https://www.csdn.net/company/index.html#recruit" target="_blank">招贤纳士</a>
+            </li>
+            <li>
+              <a href="https://www.csdn.net/company/index.html#advertisement" target="_blank">广告服务</a>
+            </li>
+            <li>
+              <a href="https://plugin.csdn.net/" target="_blank">开发助手</a>
+            </li>
+            <li>
+              <img src="./02_files/tel.png" alt="">
+              <span>400-660-0108</span>
+            </li>
+            <li>
+              <img src="./02_files/email.png" alt="">
+              <a href="mailto:webmaster@csdn.net" target="_blank">kefu@csdn.net</a>
+            </li>
+            <li>
+              <img src="./02_files/cs.png" alt="">
+              <a href="https://csdn.s2.udesk.cn/im_client/?web_plugin_id=29181" target="_blank">在线客服</a>
+            </li>
+            <li>
+              工作时间&nbsp;8:30-22:00
+            </li>
+          </ul>
+            <ul class="footer-column-b">
+            <li><img src="./02_files/badge.png" alt=""><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030143" rel="noreferrer" target="_blank">公安备案号11010502030143</a></li>
+            <li><a href="http://beian.miit.gov.cn/publish/query/indexFirst.action" rel="noreferrer" target="_blank">京ICP备19004658号</a></li>
+            <li><a href="https://csdnimg.cn/release/live_fe/culture_license.png" rel="noreferrer" target="_blank">京网文〔2020〕1039-165号</a></li>
+            <li><a href="https://csdnimg.cn/cdn/content-toolbar/csdn-ICP.png" target="_blank">经营性网站备案信息</a></li>
+            <li><a href="http://www.bjjubao.org/" target="_blank">北京互联网违法和不良信息举报中心</a></li>
+            <li><a href="http://www.cyberpolice.cn/" target="_blank">网络110报警服务</a></li>
+            <li><a href="http://www.12377.cn/" target="_blank">中国互联网举报中心</a></li>
+            <li><a href="https://download.csdn.net/index.php/tutelage/" target="_blank">家长监护</a></li>
+            <li><a href="https://chrome.google.com/webstore/detail/csdn%E5%BC%80%E5%8F%91%E8%80%85%E5%8A%A9%E6%89%8B/kfkdboecolemdjodhmhmcibjocfopejo?hl=zh-CN" target="_blank">Chrome商店下载</a></li>
+            <li>©1999-2021北京创新乐知网络技术有限公司</li>
+            <li><a href="https://www.csdn.net/company/index.html#statement" target="_blank">版权与免责声明</a></li>
+            <li><a href="https://blog.csdn.net/blogdevteam/article/details/90369522" target="_blank">版权申诉</a></li>
+            <li><a href="https://img-home.csdnimg.cn/images/20210414021151.jpg" target="_blank">出版物许可证</a></li>
+            <li><a href="https://img-home.csdnimg.cn/images/20210414021142.jpg" target="_blank">营业执照</a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+<script src="./02_files/csdn-footer.js.下載" data-isfootertrack="false" type="text/javascript"></script>
+<script type="text/javascript">
+    window.csdn.csdnFooter.options = {
+        el: '.blog-footer-bottom',
+        type: 2
+    }
+</script>        </main>
+<aside class="blog_container_aside">
+	<div id="asideProfile" class="aside-box">
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/qq_38965737" data-report-click="{&quot;mod&quot;:&quot;popu_379&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4121&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                <img src="./02_files/3_qq_38965737" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex flex-column profile-intro-name-box">
+            <div class="profile-intro-name-boxTop">
+                <a href="https://blog.csdn.net/qq_38965737" class="" id="uid" title="qq_码到成功" data-report-click="{&quot;mod&quot;:&quot;popu_379&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4122&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                    <span class="name " username="qq_38965737">qq_码到成功</span>
+                </a>
+                <span>
+                </span>
+                <span class="flag expert-blog">
+                <span class="bubble">CSDN认证博客专家</span>
+                </span>
+                <span class="flag company-blog">
+                <span class="bubble">CSDN认证企业博客</span>
+                </span>
+            </div>
+            <div class="profile-intro-name-boxFooter">
+                <span class="personal-home-page personal-home-years">码龄4年</span>
+                    <span class="personal-home-page">
+                    <a class="personal-home-certification" href="https://i.csdn.net/#/uc/profile?utm_source=14998968" target="_blank" title="暂无认证">
+                    <img src="./02_files/nocErtification.png" alt="">
+                    暂无认证
+                    </a>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="3">
+            <a href="https://blog.csdn.net/qq_38965737" data-report-click="{&quot;mod&quot;:&quot;1598321000_001&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4310&quot;}" data-report-query="t=1">  
+                <dt><span class="count">3</span></dt>
+                <dd class="font">原创</dd>
+            </a>
+        </dl>
+        <dl class="text-center" data-report-click="{&quot;mod&quot;:&quot;1598321000_002&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4311&quot;}" title="304428">
+            <a href="https://blog.csdn.net/rank/list/weekly" target="_blank">
+                <dt><span class="count">30万+</span></dt>
+                <dd class="font">周排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" title="876219">
+            <a href="https://blog.csdn.net/rank/list/total" data-report-click="{&quot;mod&quot;:&quot;1598321000_003&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4312&quot;}" target="_blank">
+                <dt><span class="count">87万+</span></dt>
+                <dd class="font">总排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" style="min-width:58px" title="9389">  
+            <dt><span class="count">9389</span></dt>
+            <dd>访问</dd>
+        </dl>
+        <dl class="text-center" title="2级,点击查看等级说明">
+            <dt><a href="https://blog.csdn.net/blogdevteam/article/details/103478461" target="_blank">
+                <img class="level" src="./02_files/blog2.png">
+            </a>
+            </dt>
+            <dd>等级</dd>
+        </dl>
+    </div>
+    <div class="item-rank"></div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="140">
+            <dt><span class="count">140</span></dt>
+            <dd>积分</dd>
+        </dl>
+         <dl class="text-center" id="fanBox" title="0">
+            <dt><span class="count" id="fan">0</span></dt>
+            <dd>粉丝</dd>
+        </dl>
+        <dl class="text-center" title="3">
+            <dt><span class="count">3</span></dt>
+            <dd>获赞</dd>
+        </dl>
+        <dl class="text-center" title="1">
+            <dt><span class="count">1</span></dt>
+            <dd>评论</dd>
+        </dl>
+        <dl class="text-center" title="5">
+            <dt><span class="count">5</span></dt>
+            <dd>收藏</dd>
+        </dl>
+    </div>
+    <div class="aside-box-footer">
+        <div class="badge-box d-flex">
+            <div class="badge d-flex">
+                <div class="icon-badge" title="阅读者勋章Lv2">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click="{&quot;spm&quot;:&quot;3001.4296&quot;}" src="./02_files/yuedu7@240.png" alt="阅读者勋章Lv2">
+                    </div>
+                </div>
+                <div class="icon-badge" title="勤写标兵Lv1">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click="{&quot;spm&quot;:&quot;3001.4296&quot;}" src="./02_files/qixiebiaobing1@240.png" alt="勤写标兵Lv1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-intro-name-boxOpration">
+        <div class="opt-letter-watch-box">
+        <a class="bt-button personal-letter" href="https://im.csdn.net/chat/qq_38965737" target="_blank" rel="noopener">私信</a>
+        </div>
+        <div class="opt-letter-watch-box"> 
+            <a class="personal-watch bt-button" id="btnAttent">关注</a>  
+        </div>
+    </div>
+</div>
+<div id="asideSearchArticle" class="aside-box">
+	<div class="aside-content search-comter">
+    <div class="aside-search aside-search-blog">         
+        <input type="text" class="input-serch-blog" name="" autocomplete="off" value="" id="search-blog-words" placeholder="搜博主文章">
+        <a class="btn-search-blog">
+                    <img src="./02_files/csdn-sou.png">
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list">
+			<li>
+				<a href="https://blog.csdn.net/qq_38965737/article/details/102595908" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_541&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4139&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/102595908&quot;,&quot;ab&quot;:&quot;new&quot;}">
+				执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……
+					<img src="./02_files/readCountWhite.png" alt="">
+					<span class="read">5067</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/qq_38965737/article/details/106004924" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_541&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4139&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/106004924&quot;,&quot;ab&quot;:&quot;new&quot;}">
+				如何解决matlab中 “尝试将 SCRIPT XXX 作为函数执行” 的错误?
+					<img src="./02_files/readCountWhite.png" alt="">
+					<span class="read">4215</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/qq_38965737/article/details/107966367" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_541&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4139&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/107966367&quot;,&quot;ab&quot;:&quot;new&quot;}">
+				python学习-第一部分 基础篇
+					<img src="./02_files/readCountWhite.png" alt="">
+					<span class="read">37</span>
+                </a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="asideCategory" class="aside-box ">
+    <h3 class="aside-title">分类专栏</h3>
+    <div class="aside-content">
+        <ul>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/qq_38965737/category_9986367.html" data-report-click="{&quot;mod&quot;:&quot;popu_537&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4137&quot;,&quot;strategy&quot;:&quot;pc付费专栏左侧入口&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/category_9986367.html&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                    <img src="./02_files/20201014180756930.png" alt="" onerror="this.src=&#39;https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64&#39;">
+                    <span class="title oneline">
+                        <span class="text">笔记</span>
+                    </span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/qq_38965737/category_10292692.html" data-report-click="{&quot;mod&quot;:&quot;popu_537&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4137&quot;,&quot;strategy&quot;:&quot;pc付费专栏左侧入口&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/category_10292692.html&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                    <img src="./02_files/20201014180756919.png" alt="" onerror="this.src=&#39;https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64&#39;">
+                    <span class="title oneline">
+                        <span class="text">python学习</span>
+                    </span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+            <li class="">
+                <a class="clearfix" target="_blank" href="https://blog.csdn.net/qq_38965737/category_9986376.html" data-report-click="{&quot;mod&quot;:&quot;popu_537&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4137&quot;,&quot;strategy&quot;:&quot;pc付费专栏左侧入口&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/category_9986376.html&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                    <img src="./02_files/20201014180756757.png" alt="" onerror="this.src=&#39;https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64&#39;">
+                    <span class="title oneline">
+                        <span class="text">matlab</span>
+                    </span>
+                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq_38965737/article/details/106004924#comments_16619143" data-report-click="{&quot;mod&quot;:&quot;popu_542&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4231&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/106004924#comments_16619143&quot;,&quot;ab&quot;:&quot;new&quot;}">如何解决matlab中 “尝试将 SCRIPT XXX 作为函数执行” 的错误?</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/qq_53098274" class="user-name" target="_blank">qq_53098274: </a>
+                    <span class="code-comments">解决方法的这些文件是在哪搜索出来的</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideNewNps" class="aside-box" style="display: block;">
+    <h3 class="aside-title">您愿意向朋友推荐“博客详情页”吗？</h3>
+    <div class="aside-content">
+        <ul class="newnps-list">
+            <li class="newnps-item" data-type="强烈不推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="./02_files/npsFeel1.png" alt="">
+                    <img class="newnps-img default" src="./02_files/npsFeelGrey1.png" alt="">
+                </div>
+                <div class="newnps-text">强烈不推荐</div>
+            </li>
+            <li class="newnps-item" data-type="不推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="./02_files/npsFeel2.png" alt="">
+                    <img class="newnps-img default" src="./02_files/npsFeelGrey2.png" alt="">
+                </div>
+                <div class="newnps-text">不推荐</div>
+            </li>
+            <li class="newnps-item" data-type="一般般">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="./02_files/npsFeel3.png" alt="">
+                    <img class="newnps-img default" src="./02_files/npsFeelGrey3.png" alt="">
+                </div>
+                <div class="newnps-text">一般般</div>
+            </li>
+            <li class="newnps-item" data-type="推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="./02_files/npsFeel4.png" alt="">
+                    <img class="newnps-img default" src="./02_files/npsFeelGrey4.png" alt="">
+                </div>
+                <div class="newnps-text">推荐</div>
+            </li>
+            <li class="newnps-item" data-type="强烈推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="./02_files/npsFeel5.png" alt="">
+                    <img class="newnps-img default" src="./02_files/npsFeelGrey5.png" alt="">
+                </div>
+                <div class="newnps-text">强烈推荐</div>
+            </li>
+        </ul>
+        <div class="newnps-form-box">
+        <div class="newnps-form">
+            <input type="text" placeholder="请输入建议或反馈后点击提交" class="newnps-input">
+            <span class="newnps-btn">提交</span>
+        </div>
+        </div>
+    </div>
+</div>
+<div id="asideArchive" class="aside-box" style="display:block!important; width:300px;">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/qq_38965737/article/details/107966367" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_382&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4136&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/107966367&quot;,&quot;ab&quot;:&quot;new&quot;}">python学习-第一部分 基础篇</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/qq_38965737/article/details/106004924" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_382&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4136&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/article/details/106004924&quot;,&quot;ab&quot;:&quot;new&quot;}">如何解决matlab中 “尝试将 SCRIPT XXX 作为函数执行” 的错误?</a>
+            </li>
+        </ul>
+        <div class="archive-bar"></div>
+        <div class="archive-box">
+                <div class="archive-list-item"><a href="https://blog.csdn.net/qq_38965737/article/month/2020/08" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_538&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4138&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;dest&quot;:&quot;&quot;}"><span class="year">2020年</span><span class="num">2篇</span></a></div>
+                <div class="archive-list-item"><a href="https://blog.csdn.net/qq_38965737/article/month/2019/10" target="_blank" data-report-click="{&quot;mod&quot;:&quot;popu_538&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4138&quot;,&quot;ab&quot;:&quot;new&quot;,&quot;dest&quot;:&quot;&quot;}"><span class="year">2019年</span><span class="num">1篇</span></a></div>
+        </div>
+    </div>
+</div>
+	<div id="footerRightAds" class="isShowFooterAds">
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57"><script async="" src="./02_files/f(6).txt"></script>
+<!-- PC-博客详情页-矩形-左下视窗（自适应） -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-1076724771190722" data-ad-slot="1894159733" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" src="./02_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" allow="attribution-reporting" data-google-container-id="a!1" data-google-query-id="CPK_39O00fICFYyMlgodOwcH1A" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=57&amp;a=707&amp;c=0&amp;k=&amp;spm=1001.2101.3001.5001&amp;d=1&amp;t=3&amp;u=c7cf0be5ca634245baec7027a68ce098" style="display: block;width: 0px;height: 0px;" src="./02_files/1.png"></div>
+		</div>
+	</div>
+    <!-- 详情页显示目录 -->
+<!--文章目录-->
+<div id="asidedirectory" class="aside-box">
+    <div class="groupfile" id="directory">
+        <h3 class="aside-title">目录</h3>
+        <div class="align-items-stretch group_item">
+            <div class="pos-box">
+            <div class="scroll-box">
+                <div class="toc-box"><ol><li class="active"><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t0">1、运行环境：Windows10+VS2015+OpenCV3.4.8</a></li><li class="sub-box"><ol><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t1">2、OpenCV调试配置：Debug+x64 如下图所示：</a></li><li class="sub-box"><ol><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t2">3.1输入 代码，如下图所示：</a></li><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t3">3.2点击 生成—生成解决方案。</a></li></ol></li><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t4">4、错误原因：</a></li></ol></li></ol></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</aside>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).parents("p.text-center").remove();
+	})
+</script>
+<script type="text/javascript" src="./02_files/user-tooltip.js.下載"></script>
+<script type="text/javascript" src="./02_files/user-medal.js.下載"></script>    </div>
+<div class="recommend-right  align-items-stretch clearfix" id="rightAside" data-type="recommend">
+    <aside class="recommend-right_aside">
+        <div id="recommend-right">
+                        <div class="flex-column aside-box groupfile" id="groupfile" style="display: block; max-height: 352.5px;">
+                <div class="groupfile-div" style="max-height: 352.5px;">
+                <h3 class="aside-title">目录</h3>
+                <div class="align-items-stretch group_item">
+                    <div class="pos-box">
+                        <div class="scroll-box">
+                            <div class="toc-box"><ol><li class="active"><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t0">1、运行环境：Windows10+VS2015+OpenCV3.4.8</a></li><li class="sub-box"><ol><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t1">2、OpenCV调试配置：Debug+x64 如下图所示：</a></li><li class="sub-box"><ol><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t2">3.1输入 代码，如下图所示：</a></li><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t3">3.2点击 生成—生成解决方案。</a></li></ol></li><li class=""><a href="https://blog.csdn.net/qq_38965737/article/details/102595908#t4">4、错误原因：</a></li></ol></li></ol></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <div id="recommendAdBox">
+                    <div id="kp_box_479" data-pid="479"><script async="" src="./02_files/f(6).txt"></script>
+<!-- PC-博客详情页-右侧视窗（自适应） -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1076724771190722" data-ad-slot="3484057394" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=479&amp;a=3267&amp;c=0&amp;k=&amp;spm=1001.2101.3001.4834&amp;d=1&amp;t=3&amp;u=ed53fcd25a5c4cb69ca48dcc368b4fb3" style="display: block;width: 0px;height: 0px;"></div>
+                </div>
+            <div class="aside-box kind_person d-flex flex-column">
+                    <h3 class="aside-title">分类专栏</h3>
+                    <div class="align-items-stretch kindof_item" id="kind_person_column">
+                        <div class="aside-content">
+                            <ul>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/qq_38965737/category_9986367.html" data-report-click="{&quot;mod&quot;:&quot;popu_537&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4137&quot;,&quot;strategy&quot;:&quot;pc付费专栏左侧入口&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/category_9986367.html&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                                        <img src="./02_files/20201014180756930.png" alt="" onerror="this.src=&#39;https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64&#39;">
+                                        <span class="title oneline">
+                                            <span class="text">笔记</span>
+                                        </span>
+                                        <span class="count float-right">1篇</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/qq_38965737/category_10292692.html" data-report-click="{&quot;mod&quot;:&quot;popu_537&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4137&quot;,&quot;strategy&quot;:&quot;pc付费专栏左侧入口&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/category_10292692.html&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                                        <img src="./02_files/20201014180756919.png" alt="" onerror="this.src=&#39;https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64&#39;">
+                                        <span class="title oneline">
+                                            <span class="text">python学习</span>
+                                        </span>
+                                        <span class="count float-right">1篇</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a class="clearfix" target="_blank" href="https://blog.csdn.net/qq_38965737/category_9986376.html" data-report-click="{&quot;mod&quot;:&quot;popu_537&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4137&quot;,&quot;strategy&quot;:&quot;pc付费专栏左侧入口&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/qq_38965737/category_9986376.html&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                                        <img src="./02_files/20201014180756757.png" alt="" onerror="this.src=&#39;https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64&#39;">
+                                        <span class="title oneline">
+                                            <span class="text">matlab</span>
+                                        </span>
+                                        <span class="count float-right">1篇</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+</div>
+<div class="mask-dark"></div>
+<script type="text/javascript">
+    var timert = setInterval(function(){
+      sideToolbar = $(".csdn-side-toolbar");
+      if (sideToolbar.length > 0) {
+        sideToolbar.css('cssText','bottom:64px !important;')
+        clearInterval(timert);
+      }
+    }, 200);
+</script>
+<script>
+    var articleId = 102595908;
+    var commentscount = 0;
+    var curentUrl = "https://blog.csdn.net/qq_38965737/article/details/102595908";
+    var myUrl = "https://my.csdn.net/";
+    var highlight = ["opencv","图像处理","解决方案","错误","执行","生成","文件","时","提示","debug","error",":","terminate","handler","called","!"];//高亮数组
+    var isRecommendModule = true;
+    var isBaiduPre = true;
+    var baiduCount = 2;
+    var share_card_url = "https://blog.csdn.net/qq_38965737/article/shareArticleCardPage?article_id=102595908"
+	var articleType = 1;
+    var baiduKey = "执行OpenCV生成的解决方案文件时，提示Debug Error和OpenCV: terminate handler is called! The last OpenCV error is:……";
+    var userNewReport = false;
+    var needInsertBaidu = true;
+    var recommendRegularDomainArr = ["blog.csdn.net/.+/article/details/","download.csdn.net/download/","edu.csdn.net/course/detail/","ask.csdn.net/questions/","bbs.csdn.net/topics/","www.csdn.net/gather_.+/"]
+    var codeStyle = "atom-one-dark";
+    var baiduSearchType = "title";
+    var canRead = true;
+    var blogMoveHomeArticle = false;
+    var showPcWindowAd = false;
+    var showSearchText = "";
+    var linkPage = true;
+    var articleSource = 1;
+    var articleReport = '{"pid": "blog", "spm":"1001.2101"}';
+    var isShowToQuestion = false;
+    var baiduSearchChannel = 'pc_relevant'
+    var baiduSearchIdentification = '.essearch_pc_relevant'
+    var initRewardObject = {
+        giver: currentUserName,
+        anchor: username,
+        articleId: articleId,
+        sign: ''
+    }
+</script>
+<script src="./02_files/sandalstrap.min.js.下載"></script>
+<div class="skin-boxshadow"></div>
+<div class="directory-boxshadow"></div>
+<div class="pay-code">
+    <div class="pay-money">实付<span class="pay-money-span" data-nowprice="" data-oldprice="">元</span></div>
+    <div class="content-blance"><a class="blance-bt" href="javascript:;">使用余额支付</a></div>
+    <div class="content-code">
+    <div id="payCode" data-id="">
+            <div class="renovate">
+                <img src="./02_files/pay-time-out.png">
+                <span>点击重新获取</span>
+            </div>
+        </div>
+        <div class="pay-style"><span><img src="./02_files/weixin.png"></span><span><img src="./02_files/zhifubao.png"></span><span><img src="./02_files/jingdong.png"></span><span class="text">扫码支付</span></div>
+    </div>
+    <div class="bt-close"><svg t="1567152543821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10924" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"><defs><style type="text/css"></style></defs><path d="M512 438.378667L806.506667 143.893333a52.032 52.032 0 1 1 73.6 73.621334L585.621333 512l294.485334 294.485333a52.074667 52.074667 0 0 1-73.6 73.642667L512 585.621333 217.514667 880.128a52.053333 52.053333 0 1 1-73.621334-73.642667L438.378667 512 143.893333 217.514667a52.053333 52.053333 0 1 1 73.621334-73.621334L512 438.378667z" fill="" p-id="10925"></path></svg></div>
+    <!-- <p style="margin-top: 8px;font-size: 14px;" class="text-center">支付成功即可阅读</p> -->
+    <div class="pay-balance">
+    <input type="radio" class="pay-code-radio" data-type="details"> 
+    <span class="span">钱包余额</span>
+    <span class="balance" style="color:#FC5531;font-size:14px;">0</span>  
+    <div class="pay-code-tile">
+        <img src="./02_files/pay-help.png" alt="">
+        <div class="pay-code-content">
+            <div class="span">
+                <p class="title">抵扣说明：</p>
+                <p> 1.余额是钱包充值的虚拟货币，按照1:1的比例进行支付金额的抵扣。<br> 2.余额无法直接购买下载，可以购买VIP、C币套餐、付费专栏及课程。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <a class="pay-balance-con" href="https://i.csdn.net/#/wallet/balance/recharge" target="_blank"><img src="./02_files/recharge.png" alt=""><span>余额充值</span></a>
+</div>
+<div style="display:none;">
+	<img src="https://blog.csdn.net/qq_38965737/article/details/102595908" onerror="setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href=&quot;\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74&quot;}},3000);">
+</div>
+
+<div class="notification" style="position: fixed; left:initial; right: 24px; top: 50px; bottom: initial; z-index: 99999;"></div><script src="./02_files/pc_wap_highlight-db1e81323a.min.js.下載" type="text/javascript"></script>
+<script src="./02_files/pc_wap_common-92b7ac5d88.min.js.下載" type="text/javascript"></script>
+<link rel="stylesheet" href="./02_files/atom-one-dark.css">
+<script>
+ // 全局声明
+ if (window.csdn === undefined) {
+      window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            report:{
+                isShow: true,
+            },
+            qr: {
+                isShow: false,
+            },
+            guide: {
+                isShow: true
+            }
+        }
+    }
+    $(function(){
+        $(document).on('click',"a.option-box[data-type='report']",function() {
+            window.csdn.userLogin.loadAjax(function(res){
+                if(userNewReport){
+                    showReportNew(false,articleTitles);
+                }else{
+                    showReport(false,articleTitles);
+                }
+            })
+        });
+    })
+</script>
+    <script src="./02_files/baidu-search.js.下載" type="text/javascript"></script>
+<script src="./02_files/qrcode.js.下載"></script>
+<script src="./02_files/qrcode.min.js.下載"></script>
+<script src="./02_files/user-ordercart.js.下載" type="text/javascript"></script>
+<script src="./02_files/user-ordertip.js.下載" type="text/javascript"></script>
+<script src="./02_files/common-8c26e24948.min.js.下載" type="text/javascript"></script>
+<script src="./02_files/detail-087c1cca14.min.js.下載" type="text/javascript"></script>
+<script src="./02_files/column-8eca907613.min.js.下載" type="text/javascript"></script>
+<script src="./02_files/side-toolbar.js.下載" type="text/javascript"></script>
+<script src="./02_files/copyright.js.下載" type="text/javascript"></script>
+<script>
+    $(".MathJax").remove();
+    if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+        $('div.markdown_views')[0].className = 'markdown_views';
+    }
+</script>
+<script type="text/javascript" src="./02_files/MathJax.js.下載"></script>
+<script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none",
+                ignoreClass:"title-article"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+<script type="text/javascript" crossorigin="" src="./02_files/login-box.js.下載"></script>
+<div id="pointDivs"><div class="point-outer point-pre"><div class="point-inner"></div></div><div class="point-outer point-pre"><div class="point-inner"></div></div><div class="point-outer point-pre"><div class="point-inner"></div></div><div class="point-outer point-pre"><div class="point-inner"></div></div><div class="point-outer point-pre"><div class="point-inner"></div></div></div><div id="st_mask" onclick="closeMask()" style="width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); position: fixed; left: 0px; top: 0px; display: none; z-index: 1;"></div><div id="st_confirmBox" style="width: 100%; position: fixed; left: 0px; top: 34%; text-align: center; display: none; z-index: 2;"><div id="st_confirm" style="width: 80%; margin: 0px auto; background: rgb(255, 255, 255); border-radius: 3px; overflow: hidden; padding-top: 20px; text-align: center;"><span id="st_confirm_text" style="background: rgb(255, 255, 255); overflow: hidden; padding: 15px 8px 30px; text-align: center; display: block;"></span><span class="st_confirm_btn cancel" style="background: rgb(255, 255, 255); color: rgb(141, 141, 141); padding: 8px; text-align: center; display: block; width: 50%; margin: 0px auto; float: left; box-sizing: border-box; border-top: 1px solid rgb(207, 207, 207); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span><span class="st_confirm_btn success" style="background: rgb(27, 121, 248); color: rgb(255, 255, 255); padding: 8px; text-align: center; display: block; width: 50%; margin: 0px auto; float: left; box-sizing: border-box; border-top: 1px solid rgb(27, 121, 248); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span><div style="clear: both; display: block;"></div></div></div><div id="st_alertBox" style="width: 100%; position: fixed; left: 0px; top: 34%; text-align: center; display: none; z-index: 2;"><div id="st_alert" style="width: 80%; margin: 0px auto; background: rgb(255, 255, 255); border-radius: 2px; overflow: hidden; padding-top: 20px; text-align: center;"><span id="st_alert_text" style="background: rgb(255, 255, 255); overflow: hidden; padding: 15px 8px 30px; text-align: center; display: block;"></span><span id="st_alert_btn" onclick="closeMask()" style="background: rgb(27, 121, 248); color: rgb(255, 255, 255); padding: 8px; text-align: center; display: block; width: 72%; margin: 0px auto 20px; border-radius: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span></div></div><div id="st_toastBox" style="width: 100%; position: fixed; left: 0px; bottom: 10%; text-align: center; display: none;"><span id="st_toastContent" style="color: rgb(255, 255, 255); background: rgba(0, 0, 0, 0.8); padding: 8px 24px; border-radius: 4px; max-width: 80%; display: inline-block; font-size: 16px;"></span></div> <div class="report-box">  <div class="pos-boxer">      <div class="pos-content">          <div class="box-title">              <p>举报</p>              <img class="icon btn-close" src="./02_files/closeBlack.png">          </div>          <div class="box-header">              <div class="box-top"><span>选择你想要举报的内容（必选）</span></div>              <div class="box-botoom">                  <ul>                      <li data="1" type="nei">内容涉黄</li>                      <li data="2" type="nei">政治相关</li>                      <li data="3" type="nei">内容抄袭</li>                      <li data="4" type="nei">涉嫌广告</li>                      <li data="5" type="nei">内容侵权</li>                      <li data="6" type="nei">侮辱谩骂</li>                      <li data="8" type="nei">样式问题</li>                      <li data="7" type="nei">其他</li>                  </ul>              </div>          </div>          <div>          <div class="box-content">          </div>          <div class="box-content">          </div>                    <div class="box-content" style="display:none;">                  <div class="box-content-top">                          <span>原文链接（必填）</span>                      </div>                      <div class="box-content-bottom" style="padding-bottom: 16px;">                        <div class="box-input" style="height: 32px;line-height: 32px;">                        <input class="content-input" type="text" id="originalurl" name="originalurl" placeholder="请输入被侵权原文链接">                        </div>                      </div>          </div>          <div class="box-content">          </div>          <div class="box-content" style="display:none;">                  <div class="box-content-top">                          <span>请选择具体原因（必选）</span>                      </div>                  <div class="box-content-bottom">                          <ul>                              <li sub_type="1">包含不实信息</li>                              <li sub_type="2">涉及个人隐私</li>                          </ul>                      </div>          </div>          <div class="box-content" style="display:none;">                  <div class="box-content-top">                          <span>请选择具体原因（必选）</span>                      </div>                  <div class="box-content-bottom">                          <ul>                              <li sub_type="1">侮辱谩骂</li>                              <li sub_type="2">诽谤</li>                          </ul>                  </div>          </div>          <div class="box-content" style="display:none;">                <div class="box-content-top">                        <span>请选择具体原因（必选）</span>                    </div>                <div class="box-content-bottom">                        <ul>                            <li sub_type="1">搬家样式</li>                            <li sub_type="2">博文样式</li>                        </ul>                </div>          </div>          <div class="box-content" style="display:none;">          </div>          </div>            <div id="cllcont" style="display:none;">            <div class="box-content-top">              <span class="box-content-span">补充说明（选填）</span>            </div>                <div class="box-content-bottom">                  <div class="box-input">                    <textarea class="ipt ipt-textarea" style="padding:0;" name="description" placeholder="请详细描述您的举报内容"></textarea>                  </div>                </div>            </div>            </div>      <div class="pos-footer">          <p class="btn-close">取消</p>          <p class="box-active">确定</p>      </div>  </div></div><div class="imgViewDom disnone" style="display: none;"><img src="https://blog.csdn.net/qq_38965737/article/details/102595908"></div><style>.imgViewDom{display:none;position:fixed;top:0;left:0;height:100%;width:100%;z-index:99999999;background: rgba(255, 255, 255,0.8);overflow: auto;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;display:-moz-box;-moz-box-align:center;-moz-box-pack:center;display:-o-box;-o-box-align:center;-o-box-pack:center;display:-ms-box;-ms-box-align:center;-ms-box-pack:center; display:box;box-align:center;box-pack:center;}.imgViewDom img{cursor: zoom-out;}</style><div class="leftPop" style="right: 0px; background-color: rgb(235, 245, 253); top: 100px; border-left: 4px solid rgb(112, 184, 240);"><svg t="1536830466687" class="icon leftPop-close" viewBox="0 0 1024 1024" version="1.1"><title>不再显示</title><path d="M512 438.378667L806.506667 143.893333a52.032 52.032 0 1 1 73.6 73.621334L585.621333 512l294.485334 294.485333a52.074667 52.074667 0 0 1-73.6 73.642667L512 585.621333 217.514667 880.128a52.053333 52.053333 0 1 1-73.621334-73.642667L438.378667 512 143.893333 217.514667a52.053333 52.053333 0 1 1 73.621334-73.621334L512 438.378667z" fill="" p-id="15859"></path></svg><span>你的浏览器目前处于缩放状态，页面可能会出现错位现象，建议100%大小显示。</span></div><svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;"><symbol id="sousuo" viewBox="0 0 1024 1024"><path d="M719.6779726 653.55865555l0.71080936 0.70145709 191.77828505 191.77828506c18.25658185 18.25658185 18.25658185 47.86273439 0 66.12399318-18.26593493 18.26125798-47.87208744 18.26125798-66.13334544 0l-191.77828505-191.77828506c-0.2338193-0.2338193-0.4676378-0.4676378-0.69678097-0.71081014-58.13206223 44.25257003-130.69075187 70.51978897-209.38952657 70.51978894C253.06424184 790.19776156 98.14049639 635.27869225 98.14049639 444.17380511S253.06424184 98.14049639 444.16912898 98.14049639c191.10488633 0 346.02863258 154.92374545 346.02863259 346.02863259 0 78.6987747-26.27189505 151.25746514-70.51978897 209.38952657z m-275.50884362 43.11621045c139.45428506 0 252.50573702-113.05145197 252.50573702-252.50573702s-113.05145197-252.50573702-252.50573702-252.50573783-252.50573702 113.05145197-252.50573783 252.50573783 113.05145197 252.50573702 252.50573783 252.50573702z"></path></symbol><symbol id="gonggong_csdnlogo_" viewBox="0 0 4096 1024"><path d="M1234.16069807 690.46341551c62.96962316 23.02318413 194.30703694 45.91141406 300.51598128 45.91141406 114.44114969 0 178.13952547-31.68724287 183.2407937-80.86454822 4.642424-44.8587714-42.21366937-50.93170978-171.44579784-81.53931916-178.57137886-43.77913792-292.49970264-111.55313011-281.32549604-219.86735976 12.9825927-125.75031047 181.27046257-220.78504823 439.49180199-220.78504822 125.88526465 0 247.93783044 8.87998544 311.17736197 29.60894839l-21.7006331 158.57116851c-41.05306337-14.27815288-198.1937175-34.11641822-304.48363435-34.11641822-107.7744129 0-163.56447339 33.90049151-167.42416309 71.06687432-4.85835069 47.04502922 51.14763648 49.23128703 191.14910897 86.50563321 189.58364043 48.09767188 272.47250144 115.81768239 261.6221849 220.81203906-12.71268432 123.51007099-164.13128096 228.53141851-466.48263918 228.53141851-125.85827383 0-234.33444849-22.96920244-294.09216204-45.93840492l19.730302-157.86940672zM3010.8325562 172.75216735c688.40130256-129.79893606 747.80813523 103.42888812 726.53935551 309.80082928l-40.08139323 381.78539207h-218.51781789l36.57258439-348.20879061c7.90831529-76.68096846 57.13960232-226.66905073-180.54170997-221.05495659-82.26807176 1.99732195-123.05122675 13.2794919-123.05122677 13.27949188s-7.15257186 92.65954408-15.81663059 161.13529804l-41.43093509 394.84895728h-214.3072473l42.53755943-389.15389062 28.09746151-302.43233073z m-869.48282929-18.05687008c49.12332368-5.34418577 124.58970448-10.76934404 228.45044598-10.76934405 173.38913812 0 313.57954648 30.17575597 400.38207891 93.63121421 77.94953781 59.16391512 129.82592689 154.95439631 115.4668015 293.74128117-13.25250106 129.15115596-80.405704 219.57046055-178.16651631 275.4954752-89.44763445 52.74009587-202.16137055 75.27744492-371.66382812 75.27744493-99.94707012 0-195.27870708-5.39816743-267.77609576-16.14052064L2141.37671774 154.69529727z m143.26736381 569.85754561c16.70732823 3.23890047 38.67786969 6.45081009 81.99816339 6.45081009 173.44311979 0 295.7386031-85.23706385 308.01943403-205.07638097 17.84094339-173.2271931-90.63523129-233.79463176-273.39018992-232.74198912-23.67096422 0-56.57279475 0-73.98188473 3.1849188l-42.6725136 428.15565036z" fill="#262626"></path><path d="M1109.8678928 870.30336371c-41.10704503 14.25116203-126.26313639 23.96786342-245.23874671 23.96786342-342.13585224 0-526.8071603-160.59548129-504.97157302-372.90540663C385.78470347 268.40769434 659.36382925 126.08500985 958.9081404 126.08500985c116.00661824 0 184.32042718 9.33882968 248.31570215 24.99351522l-20.5400271 170.42014604c-42.56455024-14.33213455-142.32268451-27.50366309-223.07926938-27.50366311-176.25016686 0-325.94134993 52.49717834-343.10752238 218.57179958-15.30380469 148.50358623 89.7715245 219.48948804 288.04621451 219.48948804 69.0155707 0 170.77102691-9.8786464 217.81605614-24.15679928l-16.49140154 162.40386737z" fill="#CA0C16"></path></symbol><symbol id="gonggong_csdnlogodanse_" viewBox="0 0 4096 1024"><path d="M1229.41995733 690.46341551c62.96962316 23.02318413 194.30703694 45.91141406 300.51598128 45.91141406 114.44114969 0 178.13952547-31.68724287 183.2407937-80.86454822 4.642424-44.8587714-42.21366937-50.93170978-171.44579784-81.53931916-178.57137886-43.77913792-292.49970264-111.55313011-281.32549604-219.86735976 12.9825927-125.75031047 181.27046257-220.78504823 439.49180199-220.78504822 125.88526465 0 247.93783044 8.87998544 311.17736197 29.60894839l-21.7006331 158.57116851c-41.05306337-14.27815288-198.1937175-34.11641822-304.48363435-34.11641822-107.7744129 0-163.56447339 33.90049151-167.42416309 71.06687432-4.85835069 47.04502922 51.14763648 49.23128703 191.14910897 86.50563321 189.58364043 48.09767188 272.47250144 115.81768239 261.6221849 220.81203906-12.71268432 123.51007099-164.13128096 228.53141851-466.48263918 228.53141851-125.85827383 0-234.33444849-22.96920244-294.09216204-45.93840492l19.730302-157.86940672zM3006.09181546 172.75216735c688.40130256-129.79893606 747.80813523 103.42888812 726.53935551 309.80082928l-40.08139323 381.78539207h-218.51781789l36.57258439-348.20879061c7.90831529-76.68096846 57.13960232-226.66905073-180.54170997-221.05495659-82.26807176 1.99732195-123.05122675 13.2794919-123.05122677 13.27949188s-7.15257186 92.65954408-15.81663059 161.13529804l-41.43093509 394.84895728h-214.3072473l42.53755943-389.15389062 28.09746151-302.43233073z m-869.48282929-18.05687008c49.12332368-5.34418577 124.58970448-10.76934404 228.45044598-10.76934405 173.38913812 0 313.57954648 30.17575597 400.38207891 93.63121421 77.94953781 59.16391512 129.82592689 154.95439631 115.4668015 293.74128117-13.25250106 129.15115596-80.405704 219.57046055-178.16651631 275.4954752-89.44763445 52.74009587-202.16137055 75.27744492-371.66382812 75.27744493-99.94707012 0-195.27870708-5.39816743-267.77609576-16.14052064L2136.635977 154.69529727z m143.26736381 569.85754561c16.70732823 3.23890047 38.67786969 6.45081009 81.99816339 6.45081009 173.44311979 0 295.7386031-85.23706385 308.01943403-205.07638097 17.84094339-173.2271931-90.63523129-233.79463176-273.39018992-232.74198912-23.67096422 0-56.57279475 0-73.98188473 3.1849188l-42.6725136 428.15565036z m-1174.74919792 145.75052083c-41.10704503 14.25116203-126.26313639 23.96786342-245.23874671 23.96786342-342.13585224 0-526.8071603-160.59548129-504.97157303-372.90540663C381.04396273 268.40769434 654.62308851 126.08500985 954.16739966 126.08500985c116.00661824 0 184.32042718 9.33882968 248.31570215 24.99351522l-20.5400271 170.42014604c-42.56455024-14.33213455-142.32268451-27.50366309-223.07926938-27.50366311-176.25016686 0-325.94134993 52.49717834-343.10752238 218.57179958-15.30380469 148.50358623 89.7715245 219.48948804 288.04621451 219.48948804 69.0155707 0 170.77102691-9.8786464 217.81605614-24.15679928l-16.49140154 162.40386737z"></path></symbol><symbol id="xieboke1" viewBox="0 0 1024 1024"><path d="M204.70021457 751.89799169h657.99199211a33.6932867 33.6932867 0 0 1 0 67.33536736H163.68452703a33.53966977 33.53966977 0 0 1-18.74125054-5.68382181c-18.63883902-9.4218307-18.17798882-29.44322156-15.20806401-39.17228615C199.0675982 570.27171976 309.41567149 409.58853908 435.38145354 290.12586836A243.22661203 243.22661203 0 0 1 536.97336934 234.20935065c138.10150976-33.79569759 228.3257813-29.95527721 318.60125827-28.52152054-17.15387692 20.48224105-36.20236071 41.6301547-57.29906892 62.93168529-3.1747472 3.22595323-164.67721739 19.91897936-187.97576692 47.05794871-23.29854894 27.13896932 129.60138005 7.37360691 125.19769798 11.11161576-21.6599699 18.33160576-44.90731339 36.4071831-69.94685287 53.8682939-4.50609297 3.1747472-149.52035944-0.35843931-174.61110436 27.85584737-25.19315641 28.16308124 101.89914903 18.12678338 96.0617103 21.40394206-67.43777825 37.63611797-125.96578207 64.62147036-212.70807253 93.8086635-57.65750823 19.4069231-121.8181284 133.13456658-146.5504346 179.06599187a435.75967738 435.75967738 0 0 0-23.04252112 49.10617311z" fill="#CA0C16"></path></symbol><symbol id="gitchat" viewBox="0 0 1024 1024"><path d="M892.08971773 729.08552746h-108.597062v-162.89559374H403.40293801v-108.59706198h488.68677972v271.49265572z m-651.58237345 54.298531V783.49265572h488.68678045v108.59706201H131.91028227V131.91028227h760.17943546v217.19412473h-108.597062V240.50734428H240.50734428v542.87671418z m542.98531145 0h108.597062v108.59706199h-108.597062v-108.59706199z" fill="#FF9100"></path></symbol><symbol id="toolbar-memberhead" viewBox="0 0 1303 1024"><path d="M1061.51168438 433.79527648A78.51879902 78.51879902 0 1 1 1129.35192643 472.74060007h-1.80593246l-48.05350474 403.97922198c-4.55409058 38.16013652-39.41643684 67.133573-80.79584389 67.13357302H319.35199503c-41.30088817 0-76.00619753-28.81639958-80.717325-66.97653526L189.01078861 472.74060007H187.12633728a78.51879902 78.51879902 0 1 1 67.76172401-38.86680556l193.31328323 119.81968805 158.13686148-336.06046024A78.5973179 78.5973179 0 0 1 658.23913228 80.14660493a78.51879902 78.51879902 0 0 1 51.58685077 137.721974l158.13686147 335.82490362 193.54883986-119.89820607z" fill="#FDD840"></path><path d="M1050.8331274 394.22180104a78.51879902 78.51879902 0 1 1 78.51879903 78.51879903h-1.80593246l-48.05350474 403.97922198c-4.55409058 38.16013652-39.41643684 67.133573-80.79584389 67.13357302H659.02432018C658.47468805 793.25433807 658.23913228 505.32590231 658.23913228 80.14660493a78.51879902 78.51879902 0 0 1 51.58685077 137.721974l158.13686147 335.82490362 193.54883986-119.89820607A78.51879902 78.51879902 0 0 1 1050.8331274 394.22180104z" fill="#FFBE00"></path></symbol><symbol id="toolbar-m-memberhead" viewBox="0 0 1303 1024"><path d="M1062.74839935 433.79527648A78.51879902 78.51879902 0 1 1 1130.58864141 472.74060007h-1.80593246l-48.05350474 403.97922198c-4.55409058 38.16013652-39.41643685 67.133573-80.79584389 67.13357302H320.58871c-41.30088817 0-76.00619753-28.81639958-80.71732499-66.97653526L190.24750358 472.74060007H188.36305226a78.51879902 78.51879902 0 1 1 67.761724-38.86680556l193.31328324 119.81968805 158.13686147-336.06046024A78.5973179 78.5973179 0 0 1 659.47584726 80.14660493a78.51879902 78.51879902 0 0 1 51.58685076 137.721974l158.13686148 335.82490362 193.54883985-119.89820607z" fill="#D6D6D6"></path><path d="M1052.06984238 394.22180104a78.51879902 78.51879902 0 1 1 78.51879903 78.51879903h-1.80593246l-48.05350474 403.97922198c-4.55409058 38.16013652-39.41643685 67.133573-80.79584389 67.13357302H660.26103515C659.71140302 793.25433807 659.47584726 505.32590231 659.47584726 80.14660493a78.51879902 78.51879902 0 0 1 51.58685076 137.721974l158.13686148 335.82490362 193.54883985-119.89820607A78.51879902 78.51879902 0 0 1 1052.06984238 394.22180104z" fill="#C1C1C1"></path></symbol><symbol id="csdnc-upload" viewBox="0 0 1024 1024"><path d="M216.37466416 723.16095396v84.46438188h591.25067168v-84.46438188c0-23.32483876 18.90735218-42.23219094 42.23219093-42.23219021s42.23219094 18.90735218 42.23219096 42.23219021v84.46438188c0 46.64967827-37.81470362 84.46438188-84.46438189 84.46438189H216.37466416c-46.64967827 0-84.46438188-37.81470362-84.46438189-84.4643819v-84.46438187c0-23.32483876 18.90735218-42.23219094 42.23219096-42.23219021s42.23219094 18.90735218 42.23219094 42.23219021zM469.76780906 275.55040991L246.55378774 499.53305726a42.30820888 42.30820888 0 0 1-59.99082735 0c-16.56346508-16.62259056-16.56346508-43.57095155 0-60.19354139L480.51167818 144.38144832A42.21952103 42.21952103 0 0 1 512 131.93984464a42.20262858 42.20262858 0 0 1 31.48409853 12.44160369l293.95294108 294.95806754c16.56346508 16.62259056 16.56346508 43.57095155 0 60.19354139a42.30820888 42.30820888 0 0 1-59.99082735 0L554.23219094 275.55040991V680.92876375c0 23.32483876-18.90735218 42.23219094-42.23219094 42.23219021s-42.23219094-18.90735218-42.23219094-42.23219021V275.55040991z"></path></symbol></svg><div>
+  <div class="csdn-side-toolbar " style="bottom: 64px !important; left: 1432.2px;"><div class="csdn-common-logo-advert">
+      <img class="logo-advert-close" src="./02_files/20210812043922.png">
+      <img class="logo-advert-back" src="./02_files/20210820101926.png">
+      <div class="logo-advert-bubble ">
+       <img src="./02_files/20210820101933.png">
+      </div>
+    </div>
+    
+    <a class="option-box" data-type="guide">
+      <img src="./02_files/guide.png" alt="" srcset="">
+      <span class="show-txt">新手<br>引导</span>
+    </a>
+    
+    
+    
+    
+    <a class="option-box" data-type="cs">
+      <img src="./02_files/kefu.png" alt="" srcset="">
+      <span class="show-txt">客服</span>
+    </a>
+    
+    
+    
+    <a class="option-box" data-type="report">
+      <span class="show-txt" style="display:flex;opacity:100;">举报</span>
+    </a>
+    
+    
+    <a class="option-box go-top-hide" data-type="gotop">
+      <img src="./02_files/fanhuidingbucopy.png" alt="" srcset="">
+      <span class="show-txt">返回<br>顶部</span>
+    </a>
+    
+  </div>
+  </div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_1_expand" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_1_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./02_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" allow="attribution-reporting" data-google-container-id="a!2" data-load-complete="true"></iframe></ins></ins></ins><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="./02_files/o.html" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div><iframe id="google_osd_static_frame_1187482032020" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./02_files/saved_resource.html"></iframe><iframe src="./02_files/aframe.html" width="0" height="0" style="display: none;"></iframe><div class="login-mark" style="display: none;"></div><div id="passportbox" class="login-box" style="display: none;"><iframe width="410" height="427" name="passport_iframe" src="./02_files/login.html" frameborder="0" scrolling="no"></iframe><span style="display: inline-block; color: rgb(153, 153, 153); font-size: 22px; cursor: pointer; position: absolute; top: 2%; right: 5%; user-select: none;">×</span></div></body><iframe id="google_esf" name="google_esf" src="./02_files/zrt_lookup.html" style="display: none;"></iframe></html>
